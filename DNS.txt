@@ -1,0 +1,10 @@
+DNS Record Type
+
+The A Record points your hostname to an IP address. The record A specifies IP address (IPv4) for given host. This is one of the most frequently used records in the DNS Zones.
+
+PTR records are used for the Reverse DNS (Domain Name System) lookup. Using the IP address you can get the associated domain/hostname. An A record should exist for every PTR record. The usage of a reverse DNS setup for a mail server is a good solution.
+
+The SOA means Start Of Authority. The SOA record defines the beginning of the authority DNS zone and specifies the global parameters for the zone. The SOA record has the following structure: "Serial number", "Primary name server (NS)", "DNS admin e-mail", "Refresh Rate", "Retry Rate", "Expire time" and "Default TTL".
+
+The NS records identify the name servers, responsible for your DNS zone. In order to have a valid DNS configuration, the NS records configured in the DNS zone must be exactly the same as these configured as name servers at your domain name provider.
+===

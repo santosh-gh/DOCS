@@ -1,0 +1,7 @@
+Architecture Support for Premier Plan: Customer-specific architectural support such as design reviews, performance tuning, configuration and implementation assistance delivered by Microsoft Azure technical specialists.
+
+Operations Support for Premier Plan: Technical account manager-led service reviews and reporting
+
+Training for Premier Plan: Azure Engineering-led web seminars, on-demand training
+
+Proactive Guidance for Premier Plan: Designated Technical Account Manager

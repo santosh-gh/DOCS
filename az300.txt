@@ -1,0 +1,6 @@
+Types of platform logs
+Resource logs
+Activity log
+Azure Active Directory logs
+===
+Integrate Azure AD logs with Azure Monitor logs

@@ -1,0 +1,542 @@
+https://www.youtube.com/watch?v=3FvT6uNMT7M&list=PL1OYTSGn7ia-drv5-xugztYN6D9Jx2wJX&index=5
+https://www.azuredevopslabs.com/labs/devopsserver/handsonlabs/
+https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/
+https://docs.microsoft.com/en-us/learn/browse/
+
+user - student-517-309343@labscloudacademy.onmicrosoft.com
+pwd - Ca1_uc7xPBaD
+
+https://vceguide.com/which-pricing-tier-should-you-recommend-for-webapp/
+https://www.exam4training.com/which-storage-accounts-should-you-identify/
+https://www.exam-answer.com/microsoft
+https://www.exam-answer.com/microsoft/az-300
+https://ravikirans.com/az-300-azure-exam-study-guide/
+https://github.com/toddbadams/az300
+https://www.whizlabs.com/microsoft-azure-certification-az-300/practice-tests/
+https://www.itexams.com/exam/AZ-203
+http://harvestingclouds.com/post/uploading-and-downloading-files-securely-from-azure-storage-blob-via-powershell/
+http://harvestingclouds.com/post/new-feature-azure-cool-blob-storage/
+https://www.examtopics.com/exams/microsoft/az-100/view/6/
+https://quizlet.com/ch/482793011/az300-flash-cards/
+https://www.youtube.com/watch?v=tHJ2s1qz1ag&t=1s
+https://github.com/MicrosoftLearning
+https://github.com/MicrosoftLearning/AZ-300-MicrosoftAzureArchitectTechnologies/tree/master/Instructions
+https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator
+https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/
+https://github.com/MicrosoftLearning/AZ-500-Azure-Security
+
+https://build5nines.com/top-free-microsoft-certification-hands-on-labs/
+https://www.youtube.com/watch?v=O2Y4zlIxASE&list=PLlQ09DQt_50YqRAov9nnHjf9NYox5sQwe&index=1
+https://www.youtube.com/channel/UCbCs0kp2bCNYyRRcvyyDJeQ/playlists
+https://www.youtube.com/watch?v=HYmrC_5wa-A&list=PLAwzouYxcpPgxcjHhG0UF4YCxHFbRpLEW
+https://www.youtube.com/watch?v=OfLKVeaLX64&list=PLAwzouYxcpPiyMgUH00W7QA8zipaqkv02
+http://ebookmediacall21.over-blog.com/ebook-download-free-exam-az-300-az-301-study-lab-guide-part-2-microsoft-certified-azure-solutions-architect-expert-by-harinder-kohli-ebook-o
+
+1. C# - 10 questions
+2. .NET MVC - 10 questions
+3. .NET Core - 10 questions
+4. Web API -  10 questions
+5. Design Pattern
+6. Azure -  10 questions
+
+-----------------------
+To use Deployment Manager, you need to create four files:
+
+Topology template
+Rollout template
+Parameter file for topology
+Parameter file for rollout
+-----------------------
+
+The template has the following sections:
+
+Parameters - Provide values during deployment that allow the same template to be used with different environments.
+
+Variables - Define values that are reused in your templates. They can be constructed from parameter values.
+
+User-defined functions - Create customized functions that simplify your template.
+
+Resources - Specify the resources to deploy.
+
+Outputs - Return values from the deployed resources.
+
+-----------------------
+Connecting a virtual network to another virtual network using the VNet-to-VNet connection type is similar to creating a Site-to-Site IPsec connection to an on-premises location. Both connectivity types use a VPN gateway to provide a secure tunnel using IPsec/IKE, and both function the same way when communicating. 
+-----------------------
+Conditional Access is the tool used by Azure Active Directory to bring signals together, to make decisions, and enforce organizational policies. 
+
+Signals
+=======
+User or group membership
+
+IP Location information
+
+Device
+
+Application
+
+Real-time and calculated risk detection
+
+Microsoft Cloud App Security (MCAS)
+Common decisions
+================
+Block access
+
+Grant acces
+
+Commonly applied policies
+========================
+Requiring multi-factor authentication for users with administrative roles
+Requiring multi-factor authentication for Azure management tasks
+Blocking sign-ins for users attempting to use legacy authentication protocols
+Requiring trusted locations for Azure Multi-Factor Authentication registration
+Blocking or granting access from specific locations
+Blocking risky sign-in behaviors
+Requiring organization-managed devices for specific applications
+
+----------------------
+
+Explanation:
+The following authentication mechanisms can be used for both MFA and SSPR:
+Short Message Service (SMS) messages
+Azure AD passwords
+Microsoft Authenticator app
+Voice call
+
+The following authentication mechanisms are used for SSPR only:
+Email addresses
+Security questions
+-----------------------
+The SMB protocol requires TCP port 445 to be open; connections will fail if port 445 is blocked.
+----------------------
+
+To move existing resources to another resource group or subscription, use the Move-AzureRmResource cmdlet.
+
+---------------------
+The account moving the resources must have at least the following permissions:
+
+Microsoft.Resources/subscriptions/resourceGroups/moveResources/action on the source resource group.
+Microsoft.Resources/subscriptions/resourceGroups/write on the destination resource group.
+
+For a move across subscriptions, the resource and its dependent resources must be located in the same resource group and they must be moved together. 
+------------------
+When moving a Web App across subscriptions, the following guidance applies:
+
+The destination resource group must not have any existing App Service resources. App Service resources include:
+Web Apps
+App Service plans
+Uploaded or imported TLS/SSL certificates
+App Service Environments
+All App Service resources in the resource group must be moved together. Note that App Service Environments cannot be moved to a new Resource Group nor to a new Subscription.
+You can move a certificate bound to a web without deleting the TLS bindings, as long as the certificate is moved with all other resources in the resource group.
+App Service resources can only be moved from the resource group in which they were originally created. If an App Service resource is no longer in its original resource group, move it back to its original resource group. Then, move the resource across subscriptions.
+-----------------------
+Before you upload a Windows virtual machines (VM) from on-premises to Microsoft Azure, you must prepare the virtual hard disk (VHD or VHDX). Azure supports
+only generation 1 VMs that are in the VHD file format and have a fixed sized disk. The maximum size allowed for the VHD is 1,023 GB. You can convert a
+generation 1 VM from the VHDX file system to VHD and from a dynamically expanding disk to fixed-sized.
+---------------------
+The performance diagnostics tool helps you troubleshoot performance issues that can affect a Windows or Linux virtual machine (VM). Supported troubleshooting
+scenarios include quick checks on known issues and best practices, and complex problems that involve slow VM performance or high usage of CPU, disk space, or
+memory.
+Advanced performance analysis, included in the performance diagnostics tool, includes all checks in the performance analysis, and collects one or more of the
+traces, as listed in the following sections. Use this scenario to troubleshoot complex issues that require additional traces. Running this scenario for longer periods
+will increase the overall size of diagnostics output, depending on the size of the VM and the trace options that are selected.
+---------------------
+You should recommend using a webhook. Azure alerts use HTTP POST to send the alert contents in JSON format to a webhook URI that you provide when you create the alert. Azure posts one entry per request when an alert is activated.
+
+You should not recommend Power BI. This service is used to present and analyze both historical and live data. The external system would need to retrieve the data from Power BI.
+
+You should not recommend Azure Event Hubs. Although this service is used to ingest data, you would need an additional component to send data to an external system.
+
+You should not recommend Azure Stream Analytics. This service is used to process large amounts of data on the fly and to perform complex data analytics and aggregations.
+-----------------------
+You should install Azure AD Connect on an on-premises server. This tool allows you to synchronize password hashes from a domain controller to Azure AD.
+
+You should not install AD Domain Services on an Azure VM. This does not allow synchronization from an on-premises AD infrastructure. It simply places a domain controller in the cloud instead of on-premises.
+-----------------------
+You can use the az network vpn-connection show Azure CLI command to show connection status for a gateway created using the Resource Manager deployment model. When the connection is established, its status shows Connected.
+-----------------------
+Virtual network (VNet) peering enables you to connect VNets. Peered VNets appear as one for connectivity purposes. You must add peering to both VNets that you want to connect. If you add peering to only one VNet, peering is in the Initiated state, and VNets will not have connectivity.
+-----------------------
+The review for security group members should be created in Azure AD Access reviews. This can be done from the access panel in Azure. To use the access reviews, you need to have an Azure AD Premium P2 license and an Enterprise Mobility + Security E5 license.
+
+The review for Azure AD roles and Azure resource roles should be created in Azure AD Privileged Identity Management (PIM). This can be done from the Azure portal. Azure PIM is a service that enables you to manage, control, and monitor access to important resources in your organization.
+
+Azure AD enterprise apps is used for reviews of users assigned to connected apps
+-------------------------
+You should recommend the Security administrator role. This role provides full access to Identity Protection but cannot reset user passwords.
+
+You should not recommend the Global administrator role. This role has a full access to Identity Protection but can reset user passwords.
+
+You should not recommend the Security reader role. This role has read-only access to Identity Protection and cannot configure policies or reset passwords.
+
+You should recommend a user risk policy. With this type of policy, Azure AD analyzes each user's sign-in so it can detect suspicious actions (risk events) related to the sign-in. After a particular learning period, the system can learn typical user behavior.
+
+You should not recommend an MFA registration policy. This type of policy provides a second layer of security to user sign-ins and transactions, but it does not analyze user sign-ins and learn typical user behavior.
+
+You should not recommend a sign-in policy. This type of policy is used to define a response for a specific sign-in risk level. It does not analyze user sign-in or learn typical user behavior.
+-----------------------
+You should assign the Azure AD Premium 1 license to your AD tenant. This is the minimum license required to install Azure AD Connect. Azure AD Connect allows you to synchronize password hashes from a domain controller to Azure AD.
+
+You should install Azure AD Connect on an on-premises server. This tool allows you to synchronize password hashes from a domain controller to Azure AD. You must install this tool to enable password writeback.
+
+You should not deploy Azure AD Passthrough Authentication. This allows users to sign in to Azure AD with the same password as they use with an on-premises directory. This is not required to enable password writeback.
+------------------------
+
+You should not use password hash synchronization from on-premises to Azure AD for single sign-on. This would be appropriate for Office 365 hybrid scenarios. You also should not recommend pass-through authentication. Although it ensures that no passwords will be stored in the cloud, it does not support smartcard authentication. You should, instead, use federation from on-premises to Azure AD for single sign-on because it allows cloud multi-factor authentication, ensures that no password hashes are stored in the cloud, and supports smartcard authentication.
+
+You should choose the custom installation type because you need to enable cloud multi-factor authentication solutions and you have more than 100,000 objects in the on-premises AD. In-place upgrade performs the upgrade from DirSync or Azure AD Sync. Express installation should be used only when you have less than 100,000 objects in the on-premises AD. You also must have an enterprise administrator account that you can use for the installation.
+
+You should install the full version of SQL Server for the Azure AD Connect database because you have more than 100,000 objects in the on-premises AD. For a smaller number of objects, you can use the default database installation, which is LocalDb. You cannot install SQL Server Express for the Azure AD Connect database because you have more than 100,000 objects in the on-premises AD. The SQL Server Express version has a data size limitation and can use only 1 GB RAM.
+
+-----------------------
+You need to give a user temporary read and write permissions to a blob by using an ad hoc shared access signature (SAS).
+
+Which six actions should you perform in sequence?
+
+You need to perform the following steps in order:
+
+1. Open Azure Storage Explorer.
+
+2. Connect to your Azure Storage account.
+
+3. Create a blob container.
+
+4. Upload the blob to the blob container.
+
+5. Get an SAS for the blob and specify start/expiry time and permissions.
+
+6. Use HTTPS to distribute the URL to the user.
+------------------------
+You first create a Recovery Services vault to contain the backup data and the backup policy. You then define the backup policy, which defines when and how often recovery points are taken, to protect the VMs.
+
+You should not define a separate backup policy for each VM. To minimize administrative effort, you should create only one policy to apply to all VMs. You then perform an initial backup. This is a disaster recovery best practice to trigger the first backup so that your data is protected.
+
+Unless you plan to perform backups manually, you should not create a storage account for files. Recovery Services manages the files internally.
+-------------------------
+You should create an Azure storage account. Images of replicated machines are held in Azure Storage. Azure VMs are created from storage when you failover from on-premises to Azure.
+
+You should prepare a vault to store all recovery points in Azure Recovery Services. This allows you to configure recovery points to meet the recovery time objective (RTO).
+
+You should set up an Azure network. When Azure VMs are created after the migration (failover), they are joined to this Azure network.
+
+You should not set the recovery point to last processed during preparation steps. The recovery point configuration is done during testing of the failover. The last-processed option means that the VM fails over to the latest recovery point that was processed by Site Recovery.
+
+You should not turn on replication during the preparation steps. This can be done after the configuration is prepared and sources and targets are configured.
+---------------------
+You should install the Site Recovery Provider on the Hyper-V host computer. Site Recovery Provider is used by Azure Site Recovery. You must install Site Recovery Provider on the Hyper-V host on which the VM is running to be able to replicate VM1 to Azure (actual configuration of the replication is performed in the Azure portal).
+
+You should not install the Recovery Services agent on the Hyper-V host computer. Recovery Services agent is used by Azure Backup to back up files and folders to Azure. You cannot use it to replicate VMs to Azure.
+
+You should not install the Recovery Services agent on VM1. Recovery Services agent is used for backing up files and folders to Azure. You cannot use it to replicate a VM to Azure.
+
+You should not install the Site Recovery Provider on VM1. Site Recovery Provider is used for replicating VMs to Azure, but you must install it on the Hyper-V host computer, not the VM.
+-----------------------
+You should first create a Recovery Services vault. This is simply a storage instance that stores backups and VMs that are replicated to Azure by using Azure Site Recovery. You should next set the Protection goal to migrate from on-premises to Azure. You should then create a Hyper-V site, install the Site Recovery Provider on the Hyper-V host and finally you should register the Hyper-V host in the vault.
+------------------------
+You should use Service Bus to find duplicate transactions in the incoming data. Service Bus is a brokered messaging system. It stores data in a queue until the subscriber is ready to receive the message.
+
+You should not use Event Hub to find duplicate transactions in the incoming data. Azure Event Hub is a big data streaming platform that enables capturing, retaining, and replaying telemetry and event stream data. The data may come from a variety of sources.
+
+You should not use Event Hub to find duplicate transactions in the incoming data. Event Grid is a fully managed event service that enables event-driven, reactive programming following a publish-subscribe model. Publishers post events without expectations about which events are being handled. Subscribers can choose which events they want to handle.
+
+You should not use Azure Queue to find duplicate transactions in the incoming data. Azure Queue storage is a service for storing large numbers of messages that can be accessed from anywhere in the world via authenticated calls using HTTP or HTTPS.
+------------------------
+site to site vpn
+Create the virtual network. 2. Create the gateway subnet. 3. Create the virtual network gateway. 4. Configure the on-premises VPN device. 5. Connect the virtual network gateway and on-premises VPN device.
+------------------------
+You should assign the Contributor role to the developer. This role allows the developer to create all types of Azure resources, without the ability to grant resource access to other users.
+
+You should not assign the Owner role to the developer. This role allows the developer to have full access to Azure, including granting resource access to other users.
+
+You should not assign the Reader role to the developer. This role only allows the developer to view resources, not create them.
+
+You should not assign the User Access Administrator role to the developer. This role allows the developer to grant resource access to other users.
+-------------------------
+You should enable MFA. This allows you to configure settings so that users receive text messages, phone calls, or app notifications for verification during sign-in attempts.
+
+You should not install AD FS. AD FS is a single sign-on solution. It does not ensure that users receive text messages before logging on to Azure AD.
+
+You should not enable SSPR. SSPR allows users to reset their passwords without IT involvement.
+
+You should not install Microsoft Authenticator on an Azure VM. Microsoft Authenticator is an app that runs on mobile devices to provide MFA.
+--------------------------
+You should configure Trusted IP settings. This feature allows you to control the IP addresses from which users can log in to Azure.
+
+You should not install the Microsoft Authenticator app on each user's device. This allows users to receive notification of login attempts, but it does not control which devices are allowed to authenticate.
+
+You should not create a VNet with all private IP addresses. Private addresses are used to communicate within the network, not over the Internet. This option is not relevant to restricting devices from Azure.
+
+You should not create a VNet with all public IP addresses. Public addresses are used to communicate over the Internet. This option is not relevant to restricting devices from Azure.
+--------------------------
+You should view detailed error logs. This is an HTML document that provides information about HTTP errors.
+
+You should not view application diagnostics logs. This is either a space-separated value or comma-separated value file that lists the date, process identifier, event level, and message.
+
+You should not view web server logs. These logs are formatted using the W3C extended log format.
+
+You should not view failed trace requests. These are XML files that show trace information.
+----------------------------
+FROM windows/iis
+
+RUN mkdir -p C:\app
+
+COPY app C:/app
+
+WORKDIR C:/app
+
+RUN npm install
+
+CMD node index.js
+
+You should first run FROM windows/iis. The FROM command specifies the container image from which the newly created image is based. In this scenario, it is a Microsoft Windows image with IIS.
+
+Next you should run RUN mkdir -p C:\app. This creates a directory named app on the C: drive on the container.
+
+Next you should run COPY ./app/* C:\app. This copies the files from the app subdirectory on your development computer to the C:\app directory on the container.
+
+Next you should run WORKDIR c:\app. This changes the working directory to C:\app on the container.
+
+Next you should run RUN npm install. This installs the Node modules from the package.json file in the current directory, which is C:\app.
+
+Next you should run CMD node Index.js. This runs the Node server and loads Index.js.
+----------------------
+to push the image to an Azure Container Registry that you created.You should tag the image with the login server. This is required before you can push the image.
+----------------------
+You should register all applications in Azure AD. Both client applications and web APIs are required to be registered to support OAuth 2.0 in an AD tenant.
+----------------------
+The developers should use the following URL:
+
+https://exam-answer.vault.azure.net/secrets/connectionString
+
+This URL uses the format https://{key vault}.vault.azure.net/secrets/{secret name} to retrieve a secret from the vault.
+------------------------
+You should use the secure enclave security feature. A secure enclave is a protected memory region that appears as a black box to the containing process and the other processes that are running on the machine. Enclaves are the perfect solution for processing sensitive data because you cannot view the data or code inside the enclave from the outside. Only the DC-series of Azure VMs supports secure enclave. The other Azure VM types do not support secure enclave.
+------------------------The APIs supported by Azure Cosmos DB are:
+
+* Azure Cosmos DB's API for MongoDB - Used when migrating from a MongoDB and supports the MongoDB wire protocol and connections by MongoDB client drivers
+
+* Cassandra API - Used to create a data store for use with apps written for Apache Cassandra with compatibility with existing applications and support for the Cassandra Query Language (CQL)
+
+* Gremlin API - Used when creating graph databases for modeling and traversing relationships between entities
+
+* SQL API - Default Cosmos DB API that supports building a non-relational document database that supports SQL syntax queries
+
+* Table API - Provides premium database support for applications written for Azure Table storage
+
+None of these APIs, with the exception of the Gremlin API, can be used to build a graph database.
+
+If you need to support multiple APIs, you must create a separate database with a unique account name for each.
+-----------------------
+Supported consistency levels are:
+
+* Strong - Reads always return the most recent committed version of an item.
+
+* Bounded staleness - Reads might lag behind writes based on configured update versions (K) or time (t).
+
+* Session - Scoped to a client session, and reads honor consistency guarantees including the consistent-prefix, monotonic reads, monotonic writes, read-your-writes, and write-follows-reads guarantees.
+
+* Consistent prefix - Updates that are returned contain some prefix of all the updates, and reads never see out-of-order writes.
+
+* Eventual - There is no ordering guarantee for reads, and replicas eventually converge.
+
+Service level agreements (SLAs) for Azure Cosmos DB guarantee that 100 percent of read requests meet the consistency guarantee for the consistency level you choose.
+------------------------
+You should enable the Azure Monitor auto-scale feature. This allows you to scale the web app onto additional VMs only on weekends.
+
+You should not migrate the web app to a VM scale set. This is more expensive than Azure Monitor.
+
+You should not implement a custom scaling solution with a WebJob. This requires more effort than Azure Monitor.
+
+You should not deploy an Azure Function and take advantage of automatic scaling. This causes the function to scale, but not the web app itself.
+------------------------
+Password administrator is correct as this role allows passwords to be reset for non-admin accounts and helpdesk admins. Global administrator will not suffice as this role grants access to all aspects for Azure AD and Microsoft services that are in Azure. User administrator will not suffice as this role allows management of all aspects of users, groups and admin password resets. Service administrator will not suffice as this role provides read access to health information and manage support requests.
+-------------------------
+The B1 plan is correct, as this is the most cost-effective solution that provides custom domains and manual scalability. P1v2, D1, and S1 supports autoscaling and custom domains, however its not the most cost-effective solution.
+-------------------------
+None of the above is correct as you need to create a custom conditional access policy to block Exchange ActiveSync. 
+Block legacy authentication is incorrect as this is the baseline conditional access policy which will block all legacy authentication for all users. 
+Require MFA for Service Management is incorrect as this will require MFA for any user accessing the Azure portal, Azure PowerShell or Azure CLI. 
+Require MFA for admins is incorrect as this forces the privileged accounts to make use of MFA. 
+End-user protection is incorrect as this requires all users to register for MFA within 14 days.
+-------------------------
+A: Managed disks don't support move.
+C: Virtual networks (classic) can't be moved.
+D: Virtual machines with the managed disks cannot be moved.
+------------------------
+You can move an app to another App Service plan, as long as the source plan and the target plan are in the same resource group and geographical region.
+-----------------------
+According to Azure backup policies, you can only backup VMs, file shares, and SQL servers, so the answer is correct. You can't backup a resource group.
+===
+Azure DNS supports importing and exporting zone files by using the Azure command-line interface (CLI). Zone file import is not currently supported via Azure
+PowerShell or the Azure portal.
+===
+Method				Primary authentication			Secondary authentication
+Password				Yes	
+
+Microsoft Authenticator app		Yes (preview)			MFA and SSPR
+SMS					Yes (preview)			MFA and SSPR
+Voice call				No				MFA and SSPR
+
+OATH software tokens			No				MFA
+OATH hardware tokens (preview)		Yes				MFA
+App passwords				No				MFA only in certain cases
+FIDO2 security keys (preview)		Yes				MFA-only
+
+Security questions			No				SSPR-only
+Email address				No				SSPR-only
+===
+Azure supports only generation 1 VMs that are in the VHD file format and have a fixed sized disk. The maximum size allowed for the VHD is 1,023 GB.
+===
+VM1 cannot be migrates as it has BitLocker enabled.
+VM2 cannot be migrates as the OS disk on VM2 is larger than 2TB.
+VMC cannot be migrates as the Data disk on VMC is larger than 4TB.
+===
+Gateway transit is a peering property that enables one virtual network to utilize the VPN gateway in the peered virtual network for cross-premises or VNet-to-VNet connectivity. 
+===
+? SMS: No more than 1 SMS every 5 minutes.
+? Voice: No more than 1 Voice call every 5 minutes.
+? Email: No more than 100 emails in an hour.
+===
+Some storage accounts do not support queues and tables, such as blob-only storage accounts, Azure Premium Storage, and general-purpose storage accounts with ZRS replication. These accounts are filtered out of from the Storage Account blade when creating a function app.
+===
+When using the Consumption hosting plan, your function code and binding configuration files are stored in Azure File storage in the main storage account. When you delete the main storage account, this content is deleted and cannot be recovered.
+===
+1. Event Grid - Use to React to Status Changes
+2. Event Hubs - Use for Telemetry and distributed data streaming
+3. Service Bus - Use for Order Processing and Financial Transactions
+===
+Q1: Debug the solution by using Visual Studio - Durable functions Only
+Q2: Use a collection of ready-made actions - Azure Log app only
+Q2: Deploy the component by using Visual Studio Teams Services - Durable function and Azure Log app only
+===
+Sharding is a technique to distribute large amounts of identically structured data across a number of independent databases. It is especially popular with cloud developers creating Software as a Service (SAAS) offerings for end customers or businesses. 
+===
+Azure Monitor autoscale applies only to Virtual Machine Scale Sets, Cloud Services, App Service - Web Apps, Azure Data Explorer Cluster , Integration Service Environment and API Management services.
+===
+Security Best Practices
+
+Database
+- Always encrypt data at rest
+- Always encrypt in-flight data (Secure Transfer)
+- Enablen database Firewalls
+- Use Azure private link(Private endpoint connection)
+VM
+- Disable VM RDP/SSH ports
+- Connect to VMs with Azure Bastion
+Secrets
+- Stores secrets in Azure Key Vault
+- Use Managed Service Identities
+Deployement
+- Use a seperate subscription for production
+- Implement RBAC+Policies
+Webapplication
+- Implement Application Gateway or Front Door
+- Enable Web Application Firewall
+Security Center
+- Use Azure Security Center
+
+1.You need to deploy a new version of the Label Maker application. Which three actions should you perform in sequence?
+
+Steps
+a.Create an alias of the image with fully qualified path to the registry 
+b.Log in to the registry and push image
+c.Restart the cluster.
+
+2. You need to access user claims in the e-commerce web app. What should you do first?
+Write custom code to make a Microsoft Graph API call from the e-commerce web app.
+
+3.You need to resolve a notification latency issue.
+
+A. Ensure that the Azure Function is set to use a consumption plan.
+C. Set Always On to true
+
+4.You need to ensure that the solution can meet the scaling requirements for Policy Service. Which Azure Application Insights data model should you use?
+B. an Application Insights metric
+
+5. You need to create a site-to-site VPN to Azure.
+
+Steps in sequence
+
+A. Create a Gateway Subnet
+B. Create a VPN gateway
+C. Create a Local gateway
+D. Create a VPN COnnection
+
+6. We need to deploy a new version of the Label Maker application
+Which 3 actions should you perform in sequence?
+
+a. Create an alias of the image with the fully qualified path to the registry
+b. Log in to the registry and push image.
+c. Restart the cluster
+
+7. We cannot just move a virtual machine between networks. What we need to do is identify the disk used by the VM, delete the VM itself while retaining the disk, and recreate the VM in the target virtual network and then attach the original disk to it.
+
+8. You need to ensure that you can create Azure AD users that have names containing a suffix of @contoso.com.
+a. Add your custom domain name to Azure AD.
+b. Add your DNS information to the domain registrar.
+c. Verify your custom domain name.
+
+9. You need to identify unattached disks that can be deleted.
+You can find unused disks in the Azure Storage Explorer console. Once you drill down to the Blob containers under a storage account, you can see the lease state of the residing VHD (the lease state determines if the VHD is being used by any resource) and the VM to which it is leased out. If you find that the lease state and the VM fields are blank, it means that the VHD in question is unused.
+
+10. The next hop type
+-> Virtual appliance: A virtual appliance is a virtual machine that typically runs a network application, such as a firewall.
+-> Virtual network gateway: Specify when you want traffic destined for specific address prefixes routed to a virtual network gateway. The virtual network gateway must be created with type VPN. You cannot specify a virtual network gateway created as type ExpressRoute in a user-defined route because with
+ExpressRoute, you must use BGP for custom routes.
+-> None: Specify when you want to drop traffic to an address prefix, rather than forwarding the traffic to a destination.
+-> Virtual network: Specify when you want to override the default routing within a virtual network.
+-> Internet: Specify when you want to explicitly route traffic destined to an address prefix to the Internet, or if you want traffic destined for Azure services with public IP addresses kept within the Azure backbone network.
+
+11. The following authentication mechanisms can be used for both MFA and SSPR:
+-> Short Message Service (SMS) messages
+-> Azure AD passwords
+-> Microsoft Authenticator app
+-> Voice call
+
+12. The following authentication mechanisms are used for SSPR only:
+-> Email addresses
+-> Security questions
+
+13. App passwords authentication mechanisms can be used for MFA only, but only in certain cases.
+
+
+14. You need to synchronize files from Server1 to Azure.
+
+Step 1: Install the Azure File Sync agent on Server1
+The Azure File Sync agent is a downloadable package that enables Windows Server to be synced with an Azure file share
+Step 2: Register Server1.
+Register Windows Server with Storage Sync Service
+Registering your Windows Server with a Storage Sync Service establishes a trust relationship between your server (or cluster) and the Storage Sync Service.
+
+Step 3: Add a server endpoint -
+Create a sync group and a cloud endpoint.
+A sync group defines the sync topology for a set of files. Endpoints within a sync group are kept in sync with each other. A sync group must contain one cloud endpoint, which represents an Azure file share and one or more server endpoints. A server endpoint represents a path on registered server.
+
+15. You need to ensure that the solution can meet the scaling requirements for Policy Service. Which Azure Application Insights data model should you use?
+
+B. an Application Insights metric
+
+
+What are virtual machine scale sets in Azure?
+
+Virtual machine scale sets are Azure compute resource that you can use to deploy and manage a set of identical VMs. With all the VMs configured the same, scale sets are designed to support true autoscale, and no pre-provisioning of VMs is required. So it’s easier to build large-scale services that target big compute, big data, and containerized workloads.
+
+Availability Set Vs Availability Scale Set
+
+The main difference is that Scale Sets have Identical VMs where in Availability Sets does not require them to be identical.
+
+Availability set, in concept, are for enhancing application availability in case one primary VM fails/needs update another VM from Fault/Update domain can be provisioned
+
+Scale sets on another hand, in concept, are designed for automatic scaling (horizontal) in application where load can vary extensively to fulfill more compute needs.
+
+Provisioning new VM in Azure when needed is easier for Scale sets as all other VMs are same in all aspects & replica of one golden copy.
+
+What are Fault Domains?
+Answer: A fault domain is a logical group of the underlying hardware that shares a common power source and network switch, similar to a rack within an on-premise data-centers. As you create VMs within an availability set, the Azure platform automatically distributes your VMs across these fault domains. This approach limits the impact of potential physical hardware failures, network outages, or power interruptions.
+
+What are Update Domains?
+Answer: An update domain is a logical group of the underlying hardware that can undergo maintenance or can be rebooted at the same time. As you create VMs within an availability set, the Azure platform automatically distributes your VMs across these update domains. This approach ensures that at least one instance of your application always remains running as the Azure platform undergoes periodic maintenance. The order of update domains being rebooted may not proceed sequentially during planned maintenance, but only one update domain is rebooted at a time.
+
+What is a web role?
+Answer: A web role provides a dedicated Internet Information Services (IIS) web-server used for hosting front-end web applications.

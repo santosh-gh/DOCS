@@ -1,0 +1,43 @@
+Azure VM Back Up
+
+1. From Azure Recovery Service Vault Select Backup Items
+
+===
+
+Restore SQL Db to alternate Location 
+
+1. From Azure Recovery Service Vault Select Backup Items
+
+===
+
+How to Migrate SQL Data using Data Migration assistant?
+
+===
+
+SQL PaaS(B/up & Recovery)
+
+===
+Cross Region Restore
+
+1. Using Recovery Service Vault we can restore a VM from one Region to another.
+Pre Requisite - 
+Storage Replaction type - Geo Redudant
+Cross Region Restore - Enable
+===
+Moving Large amount of data from On-Prem to Azure
+
+Offiline
+1. Data Box Disk - 40TB
+2. Data Box - 80TB
+3. Data Box Heavy - 1P
+
+Data can be uploaded to Block Blob, Page Blob, Managed Disk and File Storage
+
+Online - Bandwidt required from 1 GB/sec to 2 GB/sec
+Data Gateway.
+It involves Virtual Appliances. HyperV/ VMware env
+Data can be uploaded to Block Blob, Page Blob and  File Storage
+===
+
+
+Online

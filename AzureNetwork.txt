@@ -1,0 +1,20 @@
+Capabilities supported in Azure Firewall:
+
+Stateful firewall as a service
+
+Built-in high availability with unrestricted cloud scalability
+
+FQDN filtering
+
+FQDN tags
+
+Network traffic filtering rules
+
+Outbound SNAT support
+
+Inbound DNAT support
+
+Centrally create, enforce, and log application and network connectivity policies across Azure subscriptions and VNETs
+
+Fully integrated with Azure Monitor for logging and analytics
+===

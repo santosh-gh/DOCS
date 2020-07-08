@@ -1,0 +1,133 @@
+Facility Manager
+================
+Facility Manager is a Azure cloud based web application used by the building owners or Facility team to monitor the Fire Sefty of the building.
+
+The application contains different componenets
+
+1. Gateway Device Connected to the Honeywell Fire System.
+
+The Gateway Device pull all the Fire Panel System information as well as the the Sensors information and push to the cloud. It also detect the live events such as Fire, Sensore state and status to the cloud.
+
+2. Web application and Services hosted in Azure as Web App. 
+
+
+Web Application.
+
+- Fire Sustem health
+- States and ststus of Panel and sensors (Battery status, Fire, Disable , No response etc.)
+
+- Send notifications Facility team for required actions.
+
+Services-
+
+Gateway Service - The gateway service receive receive all the Inventry as well as live events from the Hardware gateway and stored in the web Azure SQL atabase.
+
+User Service  - Uses common web authentication
+
+
+Report Service - Generate reports in the form of PDF and DOC. Uses infragetics for Report generation.
+
+
+
+
+InTym - TA
+==========
+
+Device - Honeywell Biometric Access Control System 
+
+Web APP - Use the Server APIs for user Login  and all other user informations
+Create attendance Graphs and Reports.
+
+WDMS Server - Register the user through the Device using the finger print. Track the user in and out time. Store all the information to SQL Azure Database
+
+SQL Azure
+
+Notifications -  
+Uses Azure Sendgrid Service for sending mails to the configured users.
+Uses Twillio Service for sending SMS to the configured users.
+
+
+LiveVox Dialer
+=============
+
+An Dialer Web App that used for both call routing and call pacing in real time.
+
+Function App
+APIM App
+
+Azure SignalR
+
+Azure Cashe for Redis
+
+Table Storage
+
+
+
+ChangePassword: [POST] http://localhost:7071/api/ChangePassword
+
+        ChangeToReady: [POST] http://localhost:7071/api/ChangeToReady
+
+        ConnectRedisCache: [GET,POST] http://localhost:7071/api/ConnectRedisCache
+
+        DisconnectRedisCache: [GET,POST] http://localhost:7071/api/DisconnectRedisCache
+
+        GetScreenPop: [GET] http://localhost:7071/api/GetScreenPop
+
+        GetServiceDetails: [GET] http://localhost:7071/api/GetServiceDetails
+
+
+        LeaveService: [POST] http://localhost:7071/api/LeaveService
+
+        LivePollerStatus: [GET] http://localhost:7071/api/LivePollerStatus
+
+        LivePollerTerminate: [DELETE] http://localhost:7071/api/LivePollerTerminate
+
+        LivePoller_HttpStart: [POST] http://localhost:7071/api/LivePoller_HttpStart
+
+        Login: [POST] http://localhost:7071/api/Login
+
+        Logout: [DELETE] http://localhost:7071/api/Logout
+
+        HoldCall: [POST] http://localhost:7071/api/HoldCall
+
+        JoinService: [POST] http://localhost:7071/api/JoinService
+
+        ManualDialEx: [POST] http://localhost:7071/api/ManualDialEx
+	
+        GetDispositions: [GET] http://localhost:7071/api/GetDispositions
+
+        GetListOfServices: [GET] http://localhost:7071/api/GetListOfServices
+
+	Mute: [PUT] http://localhost:7071/api/Mute
+
+ 	PauseCallRecording: [POST] http://localhost:7071/api/PauseCallRecording
+
+	PreviewDial: [POST] http://localhost:7071/api/PreviewDial
+
+        PreviewSkip: [POST] http://localhost:7071/api/PreviewSkip
+
+        messages: [POST] http://localhost:7071/api/messages
+	
+	ResumeCallRecording: [POST] http://localhost:7071/api/ResumeCallRecording
+
+        RetrieveCall: [POST] http://localhost:7071/api/RetrieveCall
+
+        SaveDisposition: [PUT] http://localhost:7071/api/SaveDisposition
+	
+	Unmute: [PUT] http://localhost:7071/api/Unmute
+
+        Wrap: [POST] http://localhost:7071/api/Wrap
+
+       
+
+        negotiate: [POST] http://localhost:7071/api/negotiate 
+
+        RedisCacheTest: [POST] http://localhost:7071/api/RedisCacheTest
+
+       SetSignalRConnection: [POST] http://localhost:7071/api/SetSignalRConnection
+
+        
+
+
+
+

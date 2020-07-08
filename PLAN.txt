@@ -1,0 +1,15 @@
+1. PowerShell and CLI Commands
+2. Backup and Recovery
+3. Virtual Network
+4. Virtual Machine
+5. Messaging Services (Service Bus - queue, topics, Storage queue)
+6. Event Services (Event Grid, Event Hub)
+7. Service Fabric
+8. Backup and Recovery
+9. Web App and API App
+10. Serverless (Function, Logic App, APIM)
+11. Active Directory
+12. Databases(SQL Storage, CosmosDB)
+13.Monitor
+14. Security
+15.Loadbalancer, Web Jobs, Scheduler

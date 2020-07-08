@@ -1,0 +1,21 @@
+Inbound NAT port-forwarding rule:
+
+Create a load balancer inbound network address translation (NAT) rule to forward traffic from a specific port of the front-end IP address to a specific port of a back-end VM.
+
+1. Select All resources in the left-hand menu, and then select MyLoadBalancer from the resource list.
+
+2. Under Settings, select Inbound NAT rules, and then select Add.
+
+3. On the Add inbound NAT rule page, type or select the following values:
+
+* Name: Type MyNATRuleVM1.
+
+* Port: Type 4221.
+
+* Target virtual machine: Select MyVM1 from the drop-down.
+
+* Port mapping: Select Custom.
+
+* Target port: Type 3389.
+
+4. Select OK.

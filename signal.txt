@@ -1,0 +1,18 @@
+https://docs.microsoft.com/en-us/aspnet/signalr/overview/guide-to-the-api/handling-connection-lifetime-events#timeoutkeepalive
+
+https://github.com/aspnet/SignalR/issues/2668
+
+API Management Architect with 8+ years of experience in
+• Experience in Java, J2EE, Spring based Enterprise & Micro Services application development
+• Experience in working with Azure Cloud
+• Azure API Management, API Gateway with deep understanding of API Management configuration/usage/ use cases etc.
+• API product expertise, API design patterns and API Versioning.
+• Should be very strong in REST APIs, SOAP, JSON, XML
+• Should be very strong in REST and SOAP Security including OAUTH, SAML, JWT, OPENID etc.
+• Exposure to Oauth IAM, Azure AD, Azure AD B2C concepts
+• Identity and Credential, Key, User Management
+• Should be very strong in creating/defining Swagger/RAML/OAS specs for REST APIs
+• Understand REST principles and Guidelines
+• Hands on experience on security and deployment policies
+• Working knowledge in Multi-tenant application deployment and configurations.
+• Good Documentation, client coordination and communication skills

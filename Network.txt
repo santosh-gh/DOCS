@@ -1,0 +1,44 @@
+Regional Vnet Peering
+1. Create 2 Vnets in the same region
+2. Do the peering from one vm to other and vice versa
+
+===
+
+Global VNet Peering
+
+1. Create two Vnets in two different regions
+2. Add virtual machine to each Vent
+3. Test ping is not working from one vm to another
+4. Create Virtual Network Gateway in each Vnet
+5. Establish connection from one Vnet to another Vnet 
+6. Check the VM should now communicate now
+
+===
+
+Create a VM from an existing VM by using capture image
+
+1. Capture the image from the exist VM.
+2. Serarch the image and from the Image blade create the the VM using Create VM
+
+===
+
+Application Gateway
+
+1. Create a Vnet
+2. Create an Application Gateway in the same Vnet
+3. Create a Subnet in the Vnet and add two Servers(VMs)
+4. Add the Servers in the Application Gateway Backend Pools
+
+===
+
+Changing Datadisk from Standard to Premium
+
+===
+
+Private Link
+
+1. Private connectivity to services on Azure—traffic remains on the Microsoft network, with no public internet access
+2. Integration with on-premises and peered networks
+3. Protection against data exfiltration for Azure resources
+4. Services delivered directly to your customers’ virtual networks
+5. All traffic to the service can be routed through the private endpoint, so no gateways, NAT devices, ExpressRoute or VPN connections, or public IP addresses are needed. Private Link keeps traffic on the Microsoft global network.

@@ -1,0 +1,129 @@
+Connect-AzAccount
+===
+
+Set-AzureRmContext
+The Set-AzureRmContext cmdlet sets authentication information for cmdlets that you run in the current session. The context includes tenant, subscription, and environment information.
+===
+List subscriptions you have access to.
+az account list
+===
+Set your preferred subscription:
+az account set --subscription 'my-subscription-name'
+Note: Your subscription will be remembered for future sessions using /home/<user>/.azure/azureProfile.json .
+===
+Create a new resource group in WestUS named "MyRG".
+az group create --location westus --name MyRG
+===
+Create an Ubuntu VM in your new resource group. The Azure CLI will create SSH keys and set up the VM with
+them.
+az vm create -n myVM -g MyRG --image UbuntuLTS --generate-ssh-keys
+===
+Delete your resource group and any resources within it.
+az group delete -n MyRG
+
+POWER SHELL
+
+List all your subscriptions from Azure drive
+PS Azure:\> dir
+===
+cd to your preferred subscription
+PS Azure:\> cd MySubscriptionName
+PS Azure:\MySubscriptionName>
+===
+View all your Azure resources under the current subscription
+PS Azure:\MySubscriptionName> dir
+===
+Type dir under AllResources directory to view your Azure resources.
+PS Azure:\MySubscriptionName> dir AllResources
+===
+You can go to the ResourceGroups directory and inside a specific resource group you can find virtual machines.
+PS Azure:\MySubscriptionName> cd ResourceGroups\MyResourceGroup1\Microsoft.Compute\virtualMachines
+PS Azure:\MySubscriptionName\ResourceGroups\MyResourceGroup1\Microsoft.Compute\virtualMachines> dir
+===
+By entering into the StorageAccounts directory, you can easily navigate all your storage resources
+PS Azure:\MySubscriptionName\StorageAccounts\MyStorageAccountName\Files> dir
+===
+Get-AzLog -ResourceProvider 'Microsoft.Web' -StartTime 2015-01-01T10:30 -EndTime 2015-01-01T11:30
+===
+RESOURCE GROUP
+==============
+Connect-AzAccount
+$location = "southindia"
+$resourceGroup1 = "rg-home1"
+
+New-AzResourceGroup -Name $resourceGroup1 -Location $location
+
+$resourceGroup2 = "rg-home2"
+New-AzResourceGroup -Name $resourceGroup2 -Location $location
+
+
+STORAGE
+=======
+$storage1 = "homestg1"
+$storageAccount1 = New-AzStorageAccount -ResourceGroupName $resourceGroup1 `
+  -Name $storage1 `
+  -SkuName Standard_LRS `
+  -Location $location 
+
+New-AzStorageAccount -ResourceGroupName rg-home -Name storagehome -SkuName Standard_LRS -Location Southindia
+
+$storageName = "gridstorage"
+$storageAccount = New-AzStorageAccount -ResourceGroupName $resourceGroup `
+  -Name $storageName `
+  -Location $location `
+  -SkuName Standard_LRS `
+  -Kind BlobStorage `
+  -AccessTier Hot
+
+$ctx = $storageAccount.Context
+
+
+VNET
+====
+$vnet1= "vnet1"
+$vnet1subnet1= "vnet1subnet1"
+$vnet1subnet2= "vnet1subnet2"
+
+$virtualNetwork1 = New-AzVirtualNetwork -ResourceGroupName $resourceGroup1 -Location $location -Name $vnet1 -AddressPrefix 10.0.0.0/16
+
+$vnet1subnetConfig1 = Add-AzVirtualNetworkSubnetConfig -Name $vnet1subnet1 -AddressPrefix 10.0.0.0/24 -VirtualNetwork $virtualNetwork1
+$virtualNetwork1 | Set-AzVirtualNetwork
+
+$vnet1subnetConfig2 = Add-AzVirtualNetworkSubnetConfig -Name $vnet1subnet2 -AddressPrefix 10.0.1.0/24 -VirtualNetwork $virtualNetwork1
+$virtualNetwork1 | Set-AzVirtualNetwork
+
+
+$vnet2= "vnet2"
+$subnet2= "subnet2"
+$virtualNetwork2 = New-AzVirtualNetwork -ResourceGroupName $resourceGroup -Location $location -Name $vnet2 -AddressPrefix 10.0.0.0/16
+
+
+$subnetConfig2 = Add-AzVirtualNetworkSubnetConfig -Name $subnet2 -AddressPrefix 10.0.0.0/24 -VirtualNetwork $virtualNetwork2
+$virtualNetwork2 | Set-AzVirtualNetwork
+
+VM
+==
+$vm1= "vm1"
+$pip1= "pip1"
+$nsg1= "nsg1"
+
+New-AzVm `
+    -ResourceGroupName $resourceGroup1 `
+    -Name $vm1 `
+    -Location $location `
+    -VirtualNetworkName $vnet1 `
+    -SubnetName $vnet1subnet1 `
+    -SecurityGroupName $nsg1 `
+    -PublicIpAddressName $pip1 `
+    -OpenPorts 80,3389
+
+
+$r = Get-AzureRmResource -ResourceName "storagehome00" -ResourceGroupName "rg-home"
+
+$r.Tags.Add("Dept", "IT")
+
+Set-AzureRmResource -Tag $r.Tags -ResourceId $r.ResourceId -Force
+
+
+===
+Get-AzVMBootDiagnosticsData -ResourceGroupName "rg-home" -Name "home-vm" -Windows -LocalPath "c:\"

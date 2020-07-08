@@ -1,0 +1,64 @@
+Azure AD Connect features:
+Password hash synchronization - A sign-in method that synchronizes a hash of a users on-premises AD password with Azure AD.
+
+Pass-through authentication - A sign-in method that allows users to use the same password on-premises and in the cloud, but doesn't require the additional infrastructure of a federated environment.
+
+Federation integration - Federation is an optional part of Azure AD Connect and can be used to configure a hybrid environment using an on-premises AD FS infrastructure. It also provides AD FS management capabilities such as certificate renewal and additional AD FS server deployments.
+
+Synchronization - Responsible for creating users, groups, and other objects. As well as, making sure identity information for your on-premises users and groups is matching the cloud. This synchronization also includes password hashes.
+
+Health Monitoring - Azure AD Connect Health can provide robust monitoring and provide a central location in the Azure portal to view this activity.
+===
+multiple authentication factors
+
+Compromising multiple authentication factors presents a significant challenge for attackers. Even if an attacker manages to learn the user's password, it is useless without also having possession of the additional authentication method. It works by requiring two or more of the following authentication methods:
+
+Something you know (typically a password)
+
+Something you have (a trusted device that is not easily duplicated, like a phone)
+
+Something you are (biometrics)
+
+Multi-Factor Authentication comes as part of the following offerings:
+
+Azure Active Directory Premium or Microsoft 365 Business - Full featured use of Azure Multi-Factor Authentication using Conditional Access policies to require multi-factor authentication.
+
+Azure AD Free or standalone Office 365 licenses - Use pre-created Conditional Access baseline protection policies to require multi-factor authentication for your users and administrators.
+
+Azure Active Directory Global Administrators - A subset of Azure Multi-Factor Authentication capabilities are available as a means to protect global administrator accounts.
+===
+
+Verification methods for MFA:
+
+You can choose the verification methods that are available for your users.
+
+When your users enroll their accounts for Azure Multi-Factor Authentication, they choose their preferred verification method from the options that you have enabled. Guidance for the user enrollment process is provided in Set up my account for two-step verification.
+
+Call to phone: Places an automated voice call. The user answers the call and presses # in the phone keypad to authenticate. The phone number is not synchronized to on-premises Active Directory.
+
+Text message to phone: Sends a text message that contains a verification code. The user is prompted to enter the verification code into the sign-in interface. This process is called one-way SMS. Two-way SMS means that the user must text back a particular code. Two-way SMS is deprecated and not supported after November 14, 2018. Users who are configured for two-way SMS are automatically switched to call to phone verification at that time.
+
+Notification through mobile app: Sends a push notification to your phone or registered device. The user views the notification and selects Verify to complete verification. The Microsoft Authenticator app is available for Windows Phone, Android, and iOS.
+
+Verification code from mobile app or hardware token: The Microsoft Authenticator app generates a new OATH verification code every 30 seconds. The user enters the verification code into the sign-in interface. The Microsoft Authenticator app is available for Windows Phone, Android, and iOS.
+===
+Assign a role to a user
+
+1. Sign in to the Azure portal with an account that's a global admin or privileged role admin for the directory.
+
+2. Select Azure Active Directory, select Users, and then select a specific user from the list.
+
+3. For the selected user, select Directory role, select Add role, and then pick the appropriate admin roles from the Directory roles list, such as Conditional access administrator.
+
+4. Press Select to save.
+===
+You can configure Azure DNS to host a custom domain for your web apps. For example, you can create an Azure web app and have your users access it using either www.contoso.com or contoso.com as a fully qualified domain name (FQDN).
+
+To do this, you have to create three records:
+
+* A root "A" record pointing to contoso.com
+
+A root "TXT" record for verification
+
+A "CNAME" record for the www name that points to the A record
+===
