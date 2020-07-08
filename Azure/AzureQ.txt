@@ -1,0 +1,6 @@
+Provide one professional achievement you've completed in Microsoft Azure.
+Define cloud computing.
+In your own words, why do businesses need cloud services?
+How is scaling involved with cloud computing?
+Explain PaaS, IaaS and SaaS.
+What are the three cloud deployment models?

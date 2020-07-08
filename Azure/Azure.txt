@@ -1,0 +1,109 @@
+Infrastructure Setup
+====================
+Server
+Storage
+Developers
+Dedicated Network
+Application Security
+
+- Need huge Capital
+- Tedious Process (Setup, Power Backup, Disaster Recovery)
+
+
+Deployement Model
+------------------
+- Private Cloud
+- Public Cloud
+- Hybrid Cloud
+
+
+
+What Can we do in Azure Cloud
+
+- Create Applications and Services
+- Use Storage
+- Host Applications
+- Analytics
+
+Azure Services
+ -Compute (VMs, Cloud Service, Functions, Service Fabric)
+ -Networking (VNet, SubNet, VNet Gateway, Subnet Gateway,CDN, DNS, NSG, Firewall, P2SVPN, S2SVPN, ExpressRoute)
+ -Storage (Blob, Table, Queue, File)
+
+
+Application Cycle
+
+- Build
+- Deploy
+- Management
+
+Hosting Requirement
+Machines (Hard Disk,RAM,CPU)
+SWs(Libaries, Tools)
+Network (Band Width, FireWall, Router)
+
+On Premises Management (Responsible for everything, Pay Advance)
+  - Application
+  - Data
+  - OS
+  - Server
+  - Storage
+  - Networking
+
+
+Man Power For
+ - Setting up the Web and Database Servers(Procurment, Installation)
+ - Networking
+ - Regular Backup
+ - Disaster Recovery
+ - Monitor and Management
+ 
+
+Azure Service Model
+===================
+
+ - Infracture -IAAS(Own a CAR)
+   - VMs (RAM, CPU), Network
+   - We Manage (Application, Data, OS, Rumtime, Middleware, Virtualization)
+   - Azure Manage (Server, Storage, Physicsl Network)
+   
+   -VM, Container, Service Fabric
+
+ - Platform - PAAS(Rent A CAR)
+   - OS, Web Server (IIS, Tomcat, Apachee), Database, 
+   - We Manage (Application, Data)
+   - Azure Manage (OS, Server, Storage, Physicsl Network, Rumtime, Middleware, Virtualization)
+
+   - App service(Web App, API App, Logic App, Mobile App), Functions, PowerApps
+    
+ - Software - SAAS(Use OLA, UBER)
+   - Software tools, MS Office, Send Grid, Twillio
+
+Cloud follows 2 Principles
+On Demand(Fleible,elastic, Pay for what you use)
+Out Sourced(Backup, Installation, Lisience)
+
+How does Azure Work?
+1. Uses Virtuallization
+2. Virtulization separates the tight coupling between the CPU an OS by using a Abstract Layer called Hypervisor
+3. Hypervsor emulates all the features of a real computer machine. It can run multiple VMs at the same time.
+4. It can run any compatible OS such as Windows or Linux
+5. Each Data center there are many Racks filled with Servers
+6. Each Server contains Hypervisor to run multiple VMs
+7. Network Switch provide connectivity to the VMs
+8. Each Server contains a special piece of software called Fabric Controller
+9. Each Fabric controller connected with another piece of software called Orchestrator
+10. Orchestrator Manages everything that happens in the Azure including responding user request.
+11. User Request to Azure using Orchestrator WEB API
+12. When User Request for a VM the Orchestartor package everything that required and send to the best available Rack.
+13. The Fabric Controller Create the VM and the user can connect it.
+
+12. WEB API can be called by using many tools (Azure Portal, Power Shell, Azure CLI)
+
+
+
+
+
+
+ - 
+
