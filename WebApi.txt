@@ -1,0 +1,79 @@
+What is ASP.NET Web API?
+ASP.NET Web API is a framework provided by the Microsoft with which we can easily build HTTP services that can reach a broad of clients, including browsers, mobile, IoT devices, etc. ASP.NET Web API provides an ideal platform for building RESTful applications on the .NET Framework.
+
+What is the difference between ASP.NET Web API and WCF?
+Web API is a Framework to build HTTP Services that can reach a board of clients, including browsers, mobile, IoT Devices, etc. and provided an ideal platform for building RESTful applications. It is limited to HTTP based services. ASP.NET framework ships out with the .NET framework and is Open Source. 
+WCF i.e. Windows Communication Foundation is a framework used for building Service Oriented applications (SOA) and supports multiple transport protocol like HTTP, TCP, MSMQ, etc. It supports multiple protocols like HTTP, TCP, Named Pipes, MSMQ, etc. WCF ships out with the .NET Framework. Both Web API and WCF can be self-hosted or can be hosted on the IIS Server.
+
+When to prefer ASP.NET Web API over WCF?
+It totally depends upon the requirement. Choose ASP.NET Web API is you want only HTTP based services only as Web API is a lightweight architecture and is good for the devices which have limited bandwidth. We can also create the REST services with the WCF, but that requires lots of configuration. In case, if you want a service that should support multiple transport protocol like HTTP, UDP, TCP, etc. then WCF will be a better option.
+
+What is the difference between ASP.NET MVC application and ASP.NET Web API application?
+ASP.NET MVC is used to create a web application which returns both data as well as View whereas Web API is used to create HTTP based Services which only returns data not view. In an ASP.NET MVC application, requests are mapped to Action Methods whereas in the ASP.NET Web API request is mapped to Action based on the Action Verbs.
+
+What are the RESTful Services?
+REST stands for the Representational State Transfer. This term is coined by the Roy Fielding in 2000. RESTful is an Architectural style for creating loosely couple applications over the HTTP. In order to make API to be RESTful, it has to adhere the around 6 constraints that are mentioned below:
+
+Client and Server Separation: Server and Clients are clearly isolated in the RESTful services.
+
+Stateless: REST Architecture is based on the HTTP Protocol and the server response can be cached by the clients, but no client context would be stored on the server.
+
+Uniform Interface: Allows a limited set of operation defined using the HTTP Verbs. For eg: GET, PUT, POST, Delete etc.
+
+Cacheable: RESTful architecture allows the response to be cached or not. Caching improves performance and scalability.
+
+Code-On-Demand
+
+Layered System
+
+What is Request Verbs or HTTP Verbs?
+In RESTful service, we can perform all types of CRUD (Create, Read, Update, Delete) Operation. In REST architecture, it is suggested to have a specific Request Verb or HTTP verb on the specific type of the call made to the server. Popular Request Verbs or HTTP Verbs are mentioned below:
+
+HTTP Get: Used to get or retrieve the resource or information only.
+
+HTTP Post: Used to create a new resource on the collection of resources.
+
+HTTP Put: Used to update the existing Response
+
+HTTP Delete: Used to Delete an existing resource.
+
+
+What is Content Negotiation in Web API?
+Content Negotiation is the process of selecting the best representation for a given response when there are multiple representations available. Two main headers which are responsible for the Content Negotiation are:
+
+Content-Type
+
+Accept
+
+The content-type header tells the server about the data, the server is going to receive from the client whereas another way to use Accept-Header, which tells the format of data requested by the Client from a server. In the below example, we requested the data from the server in JSON format.
+
+What is the use of Authorize Attribute?
+Web API provided a built-in authorization filter, i.e. Authorize Attribute. This filter checks whether the user is authenticated or not. If not, the user will see 401 Unauthorized HTTP Status Code.
+
+What are the Advantages of Using ASP.NET Web API?
+
+It works the HTTP way using standard HTTP verbs like GET, POST, PUT, DELETE, etc. for all CRUD operations
+Complete support for routing
+Response generated in JSON or XML format using MediaTypeFormatter
+It has the ability to be hosted in IIS as well as self-host outside of IIS
+Supports Model binding and Validation
+Support for OData
+
+Name types of Action Results in Web API 2
+
+void - Return empty 204 (No Content)
+HttpResponseMessage - Return empty 204 (No Content)
+IHttpActionResult - Call ExecuteAsync to create an HttpResponseMessage, then convert to an HTTP response message
+Some other type - Write the serialized return value into the response body; return 200 (OK).
+
+
+Why should I use IHttpActionResult instead of HttpResponseMessage?
+
+There are several benefits of IHttpActionResult over HttpResponseMessage mentioned in Microsoft ASP.Net Documentation:
+
+Simplifies unit testing your controllers.
+Moves common logic for creating HTTP responses into separate classes.
+Makes the intent of the controller action clearer, by hiding the low-level details of constructing the response.
+Also a class implementing IHttpActionResult as a factory of HttpResponseMessage. With that mind set, it now becomes an object that need to be returned and a factory that produces it. In general programming sense, you can create the object yourself in certain cases and in certain cases, you need a factory to do that.
+
+Long story short - it is not IHttpActionResult versus HttpResponseMessage. Basically, it is how you want to create the response.

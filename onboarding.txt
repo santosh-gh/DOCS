@@ -1,0 +1,35 @@
+Customer - Mercedes Benz 
+========================
+First Name : Mercedes
+Last Name : Benz
+Username : naruj@getnada.com
+email -naruj@getnada.com
+Account number : 13043170a4271730
+password - Welcome@2020
+
+First Name : Mercedes2020
+Last Name : Benz2020
+Username : rali@getnada.com
+email -rali@getnada.com
+Account number : 15589170a43f3b69
+password - Welcome!2020
+
+
+Customer  - Coco Cola 
+=====================
+First Name : Coco
+Last Name : Cola
+username - xamy@getnada.com
+email- xamy@getnada.com
+Account number - 38382170a436cce6
+password - Welcome@2020
+
+First Name : Coco2020
+Last Name : Cola2020
+username - muti@getnada.com
+email- muti@getnada.com
+Account number : 82582170a444623b
+password - Welcome!2020
+
+
+8b144861420d4c9f8d7fa40704346f83

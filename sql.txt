@@ -1,0 +1,113 @@
+SQL Server Indexes
+Indexes are special data structures associated with tables or views that help speed up the query. SQL Server provides two types of indexes: clustered index and non-clustered index.
+
+Clustered	
+A clustered index sorts and stores the data rows of the table or view in order based on the index key. This type of index is implemented as a B-tree structure that supports fast retrieval of the rows, based on their key values.
+
+Nonclustered	
+A nonclustered index can be defined on a table or view with a clustered index or on a heap. Each row in the index contains the key value and a row locator. This locator points to the data row in the clustered index or heap having the key value. The rows in the index are stored in the order of the key values, but the data rows are not guaranteed to be in any particular order unless they are in a clustered index.
+
+Unique	A unique index ensures that the key contains no duplicate values and therefore every row in the table or view is in some way unique.
+
+What Is SQL Profiler?
+
+SQL Profiler is a tool which allows system administrator to monitor events in the SQL server. This is mainly used to capture and save data about each event of a file or a table for analysis.
+
+What are the differences between local and global temporary tables?
+
+Local temporary tables are visible when there is a connection, and are deleted when the connection is closed.
+CREATE TABLE #<tablename>
+
+Global temporary tables are visible to all users, and are deleted when the connection that created it is closed.
+
+What is CHECK constraint?
+
+A CHECK constraint can be applied to a column in a table to limit the values that can be placed in a column. Check constraint is to enforce integrity.
+CREATE TABLE ##<tablename>
+
+What is sub query and its properties?
+
+A sub-query is a query which can be nested inside a main query like Select, Update, Insert or Delete statements. This can be used when expression is allowed. Properties of sub query can be defined as
+
+A sub query should not have order by clause
+A sub query should be placed in the right hand side of the comparison operator of the main query
+A sub query should be enclosed in parenthesis because it needs to be executed first before the main query
+More than one sub query can be included
+
+What are the types of sub query?
+
+There are three types of sub query –
+
+Single row sub query which returns only one row
+Multiple row sub query which returns multiple rows
+Multiple column sub query which returns multiple columns to the main query. With that sub query result, Main query will be executed.
+
+What is SQL server agent?
+
+The SQL Server agent plays a vital role in day to day tasks of SQL server administrator(DBA). Server agent's purpose is to implement the tasks easily with the scheduler engine which allows our jobs to run at scheduled date and time.
+
+What are scheduled tasks in SQL Server?
+
+Scheduled tasks or jobs are used to automate processes that can be run on a scheduled time at a regular interval. This scheduling of tasks helps to reduce human intervention during night time and feed can be done at a particular time. User can also order the tasks in which it has to be generated.
+What is COALESCE in SQL Server?
+
+COALESCE is used to return first non-null expression within the arguments. This function is used to return a non-null from more than one column in the arguments.
+
+What is a Trigger?
+
+Triggers are used to execute a batch of SQL code when insert or update or delete commands are executed against a table. Triggers are automatically triggered or executed when the data is modified. It can be executed automatically on insert, delete and update operations.
+
+What are the types of Triggers?
+There are four types of triggers and they are:
+
+Insert
+Delete
+Update
+Instead of
+
+What is an IDENTITY column in insert statements?
+
+IDENTITY column is used in table columns to make that column as Auto incremental number or a surrogate key.
+
+What is Bulkcopy in SQL?
+
+Bulkcopy is a tool used to copy large amount of data from Tables. This tool is used to load large amount of data in SQL Server.
+What will be query used to get the list of triggers in a database?
+
+Query to get the list of triggers in database-
+
+Select * from sys.objects where type='tr'
+
+What is the difference between UNION and UNION ALL?
+
+UNION: To select related information from two tables UNION command is used. It is similar to JOIN command.
+UNION All: The UNION ALL command is equal to the UNION command, except that UNION ALL selects all values. It will not remove duplicate rows, instead it will retrieve all rows from all tables.
+
+What is Collation?
+
+Collation is defined to specify the sort order in a table. There are three types of sort order –
+
+Case sensitive
+Case Insensitive
+Binary
+
+What will be the maximum number of index per table?
+
+For SQL Server 2008 100 Index can be used as maximum number per table. 1 Clustered Index and 999 Non-clustered indexes per table can be used in SQL Server.
+
+What is the difference between COMMIT and ROLLBACK?
+
+Every statement between BEGIN and COMMIT becomes persistent to database when the COMMIT is executed. Every statement between BEGIN and ROOLBACK are reverted to the state when the ROLLBACK was executed.
+
+What are the methods used to protect against SQL injection attack?
+
+Following are the methods used to protect against SQL injection attack:
+
+Use Parameters for Stored Procedures
+Filtering input parameters
+Use Parameter collection with Dynamic SQL
+In like clause, user escape characters
+
+What is Filtered Index?
+
+Filtered Index is used to filter some portion of rows in a table to improve query performance, index maintenance and reduces index storage costs. When the index is created with WHERE clause, then it is called Filtered Index

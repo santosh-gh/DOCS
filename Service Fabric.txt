@@ -1,0 +1,108 @@
+https://www.youtube.com/watch?v=ScJ4VxOmNGs&t=6831s
+
+It is a PAAS used for building internet scaled, high througput, low latency distributed applications
+
+Microservice - It is a small service which has only one responsibility for performing a single action (processing one type of transaction or providing an API).
+
+Microservice help building appplication with high availability, relability and scalibility.
+
+
+Solve the problems like Contener orchestration, automatic Failure detection and reliable message delevery are all handled by the service fabric platform
+
+
+Reliable Services
+
+Stateless Service - Services in which no state integrated with it, services not maintain there under lying data ex - Web API
+Stateless microservices don’t save anything. They handle requests and return responses. Everything they need to know is supplied on the request and once the request is complete they forget it. They don’t keep any handy permanent notes to remind them where they got to. When a stateless service terminates it has nothing to save.
+
+
+Stateful Service - Services those maintain there state locally,data persistes across service call, storing data locally improves the perframnce
+
+Stateful microservices possess saved data in a database that they read from and write to directly. Note that well-behaved stateful microservices don’t tend to share databases with other microservices because that makes it hard to maintain decoupling and well-defined interfaces. When a stateful service terminates it has to save its state.
+
+
+Stateful Actors Services - Single threaded isolated independent compute state
+
+What are Stateful and Stateless applications?
+Stateful and Stateless applications store state from client requests on the server itself and use that state to process further requests. It uses DB for storing data as a backend, but session information stored on the server itself. When a user sends a login request, it enables login to be true and user authenticated now, and on the second request, the user sees the dashboard. Stateful applications don’t need to make a call to DB second time as session info stored on the server itself, hence it is faster. But it does have drawbacks. Let’s say there is a load balancer and there are two servers behind, running the same Stateful application. The now first request to log in go to server 1 and second request might go to server 2, now since only server one has enabled login to true, the user won’t be able to logic when LB sends him to 2nd server. So it’s not possible to horizontally scale Stateful applications.
+
+While Stateless applications work in different ways. They don’t store any state on the server. They use DB to store all the Info. Obviously, DB is stateful, i.e. it has persistent storage attached to it.
+
+Typically, a user requests for login with credentials, any of the servers behind LB process the request and generates an auth token and stores it in DB and returns token to the client on the frontend. Next request is sent along with the token, Now, no matter whichever server process request, it will match the token with info in DB, and grant login to the user. Every request is independent, doesn’t have any link with previous or next request, just like REST.
+
+
+Microservces Options
+====================
+
+Service Fabric
+ - Distributed Systems Platform
+ - Easy to Package
+ - Easy to Deploy
+ - Highly Scalable
+ - Reliable
+ - Abstracts Infrastructure
+ - Suited for Complex Systems
+ - Medium Portability
+
+Containers
+
+ - Packaged Dependancy
+ - High level of Control
+ - High level of Responsibility
+ - Complex Setup
+ - Very High Portability
+
+Paas
+
+ - Easy to Develop
+ - Easy to Deploy
+ - Serverless
+ - Scalable
+ - Cost Effective
+ - Very Low Portability
+
+
+Containers wrap an application and all of its dependencies, such as libraries and configuration files, into its own isolated 'box' that contains everything needed to run the software inside the container. Wherever the container runs, the application inside it always has everything it needs to run such as the right versions of its dependent libraries, any configuration files, and anything else it needs to run.
+
+
+Azure Service Fabric Concepts
+Cluster : A collection of virtual or physical machines connected to each other through a network into which we deploy and manage our microservices, which is capable of scaling to thousands of machines.
+
+Node : A single physical or virtual machine in that cluster, assigned with a name. Nodes have placement properties, auto-start Windows service. It’s also possible to host multiple nodes on a single physical or virtual machine by using some executables.
+
+Applications and services : A collection of services is called as an application while a service is a complete functional unit that delivers certain functionalities. We define the type of the application and its associated service types to author a Service Fabric application. As the code, configuration, and data are isolated from each other in Service Fabric you can deploy multiple version of the applications in the same cluster.
+
+Partitions and replicas : A service is capable of having one single or multiple partitions and a partition can have many replicas. Partitions are used as the scaling mechanism to distribute workloads to different service Having one primary replica and multiple secondary replicas, if primary replica fails, the secondary replica automatically is promoted to primary to keep service availability and they will add required more secondary replicas to bring back to the desired level to keep enough redundancy.
+
+Stateless : A Service, where there is no requirement to capture the state for future purposes. For example, think of an application to create a thumbnail from an image. As each time we are provided with a new image we need not capture any state there for any future purposes, so we use stateless service.
+
+Stateful : In a stateful service we need to capture our service's state. For example, in case of a shopping cart, where the user adds some products from some pages and then, moves on to a different page where he selects another product, we need to use stateful microservices to retain the states. Modifying names service state of primary replica will replicate to all secondary replicas by service fabric.
+
+Guest executables : Executables written in any language, such as Node.js, Java, or C++ that run as-is on the host operating system which doesn't link or refers to any Service Fabric runtime files. These types can’t use some features of Service Fabric such as the naming service for endpoint discovery.
+
+
+Azure Message Sevices
+=====================
+
+Messages have a clear intent – they are sent for a specific action or response. When a message is sent to a warehouse system requesting an item to pick – this message has an intent or a command that requires an action – the client or system sending the message is expecting a response in this case.
+
+Service Bus - The Service Bus is one of the oldest services of the Azure platform – it is a highly reliable, brokered cloud messaging system. 
+
+
+Queues are offering an asynchronous messaging capability with first-in-first-out (FIFO) message delivery. Only one consumer receives each message. Messages are persisted on the queue, and the consumer does not have to pick up the message straight away, i.e., the message publisher and consumer do not have to be connected to queue at the same time. Hence, queues are suitable for store-and-forward of messages in a particular scenario.
+
+Topics and subscriptions offer a similar capability as queues. However, there can be more consumers for messages that are sent to a topic. A topic has one or more subscriptions. Furthermore, subscriptions can have filters, and thus various messages to a topic can end up in different subscriptions belonging to the topic.
+
+Relay provides a gateway to connect on-premise services to Azure, without having to open a firewall connection to the network. The Relay has two features – Hybrid Connections and WCF-Relays. Both enable a secure connection to on-premise services. The difference is that hybrid connection uses the open standard web socket, while WCF-Relay uses the legacy Windows Communication Foundation (WCF) to enable remote procedure calls.
+
+Storage Queue
+
+
+Events
+========
+
+An event, on the other hand, reflects a fact – an occurrence in the past. Let’s say the requested item leaves the warehouse and the system sent out a notification message there could be many systems or devices interested in it.
+
+Event Hubs
+Event Grid
+
