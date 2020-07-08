@@ -1,0 +1,17 @@
+https://oceanware.wordpress.com/2019/06/15/angular-7-azure-functions-signalr-custom-authenticaion/
+
+https://docs.microsoft.com/en-us/azure/app-service/configure-authentication-provider-aad
+
+https://charliedigital.com/2019/09/02/azure-functions-signalr-and-authorization/
+
+https://stackoverflow.com/questions/57169650/in-azure-signalr-serverless-mode-how-to-map-connection-ids-to-users
+
+
+
+repo
+https://dev.azure.com/AloricaDevOps/CxMPDashBoard/_git/SignalRDemo
+
+http://localhost:7071/api
+
+https://functionapptest2020.azurewebsites.net/api
+https://fun2000.azurewebsites.net/api

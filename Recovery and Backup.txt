@@ -1,0 +1,15 @@
+Azure Monitor 
+- a service in Azure that provides performance and availability monitoring for applications and services in Azure, other cloud environments, or on-premises. 
+- Azure Monitor collects data from multiple sources into a common data platform where it can be analyzed for trends and anomalies. 
+- Rich features in Azure Monitor assist you in quickly identifying and responding to critical situations that may affect your application.
+
+Application Insights - 
+- monitors the availability, performance, and usage of your web applications whether they're hosted in the cloud or on-premises.
+- provide deep insights into your application's operations and diagnose errors without waiting for a user to  report them.
+- includes connection points to a variety of development tools and integrates  with Visual Studio to support your DevOps processes.
+
+Azure Monitor for containers 
+- Azure Monitor for containers is a feature designed to monitor the performance of container workloads deployed to managed Kubernetes clusters hosted on Azure Kubernetes Service (AKS). 
+- It gives you performance visibility by collecting memory and processor metrics from controllers, nodes, and containers that are available in
+Kubernetes through the Metrics API. 
+- Container logs are also collected. 

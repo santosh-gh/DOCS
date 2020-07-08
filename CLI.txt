@@ -1,0 +1,22 @@
+https://blog.interviewmocha.com/microsoft-azure-interview-questions-to-hire-windows-azure-developer
+
+https://www.besanttechnologies.com/windows-azure-interview-questions-and-answers
+
+https://www.gangboard.com/blog/microsoft-azure-interview-questions-and-answers
+
+1. Azure Logic App Tutorial
+2. Azure Logic App Control Actions
+
+
+===================================
+
+https://stackoverflow.com/questions/7982757/signalr-connection-breaks-after-redirection-to-another-view-in-mvc3-app
+
+
+https://docs.microsoft.com/en-us/aspnet/signalr/overview/testing-and-debugging/troubleshooting#connection-id-is-inconsistent-or-connection-breaks-between-page-loads
+
+
+Connection ID is inconsistent or connection breaks between page loads
+This behavior is by design. Since the hub object is hosted in the page object, the hub is destroyed when the page refreshes. A multi-page application needs to maintain the association between users and connection IDs so that they will be consistent between page loads. The connection IDs can be stored on the server in either a ConcurrentDictionary object or a database.
+
+https://stackoverflow.com/questions/16077519/reusing-same-connection-in-signalr-while-navigating-through-different-pages

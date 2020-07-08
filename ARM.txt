@@ -1,0 +1,34 @@
+Find-AzureRmResource -ResourceType "microsoft.web/sites" 
+
+
+
+New-AzureRmResourceGroup -Name 'SkylinesRG' -Location 'southindia'
+
+
+
+$Resource = Get-AzureRmResource -ResourceType "storage" -ResourceName "storageskylines1"
+
+Move-AzureRmResource -ResourceId $Resource.ResourceId -DestinationResourceGroupName "SkylinesRG-1"
+
+
+
+ $Resource = Get-AzureRmResource -ResourceType "Microsoft.Storage/storageAccounts" -ResourceName "storageskylines1" -ResourceGroupName "SkylinesRG-1"
+Move-AzureRmResource -ResourceId $Resource.ResourceId -DestinationResourceGroupName "SkylinesRG-2"
+
+Set-AzureRmResourceGroup -Name SkylinesRG-1 -Tag @{ Dept="IT"; Environment="Test" }
+
+$tags = (Get-AzureRmResourceGroup -Name SkylinesRG-1).Tags
+$tags += @{Status="Approved"}
+Set-AzureRmResourceGroup -Tag $tags -Name SkylinesRG-2
+
+(Get-AzureRmResourceGroup -Name "SkylinesRG-1").Tags
+
+New-AzureRmResourceLock -LockLevel ReadOnly -LockNotes "Notes" -LockName "SLWebSiteLock" -ResourceName "storageskylines1"
+-ResourceGroupName "SkylinesRG-1" -ResourceType "Microsoft.Storage/storageAccounts"
+
+New-AzureRmResourceLock -LockLevel ReadOnly -LockNotes "Notes about the lock" -LockName "SLWebSiteLock" -ResourceName "storageskylines1" -ResourceType "Microsoft.Storage/s
+torageAccounts" -ResourceGroup "SkylinesRG-2"
+
+Get-AzureRmResourceLock -LockName "SLWebSiteLock" -ResourceName "storageskylines1" -ResourceType"Microsoft.Storage/storageAccounts" -ResourceGroupName "SkylinesRG-2"
+
+Remove-AzureRmResourceLock -LockName "SLWebSiteLock" -ResourceName "storageskylines1" -ResourceGroupName "SkylinesRG-2" -ResourceType"Microsoft.Storage/storageAccounts"
