@@ -1,0 +1,21 @@
+https://aadguide.azurewebsites.net/integration/webapisingletenant/
+https://bitoftech.net/2014/09/12/secure-asp-net-web-api-2-azure-active-directory-owin-middleware-adal/
+https://channel9.msdn.com/Blogs/AzureApiMgmt/Protecting-Web-API-Backend-with-Azure-Active-Directory-and-API-Management
+https://bitoftech.net/2014/09/12/secure-asp-net-web-api-2-azure-active-directory-owin-middleware-adal/
+
+https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-protect-backend-with-aad
+https://benperk.github.io/msdn/2016/2016-10-how-i-connected-a-console-application-to-a-web-api-protected-by-an-azure-active-directory.html
+https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-oauth2
+
+https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/resource-consistency/resource-access-management
+
+https://www.koskila.net/how-to-fix-admin-consent-issues-aadsts65001/
+
+
+https://www.youtube.com/watch?v=Ad5zTcXyGOc
+
+DevPortalClientCert - BMOrb]3QDvr==dzv28tcjif5wvRmr:WY
+
+https://aloricaapim.portal.azure-api.net/docs/services/authorization-server/console/oauth2/authorizationcode/callback
+
+https://aloricaapim.portal.azure-api.net/signin-aad

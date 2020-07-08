@@ -1,0 +1,40 @@
+Load Balancing - Load balancing aims to optimize resource use, maximize throughput, minimize response time, and avoid overloading any single resource. 
+
+Front Door - is an application delivery network that provides global load balancing and site acceleration service for web applications. It offers Layer 7 capabilities for your application like SSL offload, path-based routing, fast failover,caching, etc. to improve performance and high-availability of your applications.
+
+Azure Front Door Service enables you to define, manage, and monitor the global routing for your web traffic by optimizing for best performance and instant global failover for high availability. With Front Door, you can transform your global (multi-region) consumer and enterprise applications into robust, high-performance personalized modern applications, APIs, and content that reach a global audience with Azure.
+
+Azure Traffic Manager - is a DNS-based traffic load balancer that enables you to distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness.Traffic Manager uses DNS to direct client requests to the most appropriate service endpoint based on a traffic-routing method and the health of the endpoints. 
+
+Application Gateway - offering various Layer 7 load-balancing capabilities. Use it to optimize web farm productivity by offloading CPU-intensive SSL termination to the gateway.
+
+With Application Gateway, you can make routing decisions based on additional attributes of an HTTP request, such as URI path or host headers.
+
+or example, you can route traffic based on the incoming URL. So if /images is in the incoming URL, you can route traffic to a specific set of servers (known as a pool) configured for images. If /video is in the URL, that traffic is routed to another pool that's optimized for videos.
+
+Load balancing - efficiently distribute load or incoming network traffic across a group of backend resources or servers.
+
+A public Load Balancer can provide outbound connections for virtual machines (VMs) inside your virtual network by translating their private IP addresses to public IP addresses. Public Load Balancers are used to load balancer internet traffic to your VMs.
+
+An internal (or private) Load Balancer can be used for scenarios where only private IP addresses are needed at the frontend. Internal Load Balancers are used to load balance traffic inside a virtual network.
+
+Service Bus - Microsoft Azure Service Bus is a fully managed enterprise integration message broker. Service Bus can decouple applications and services. It offers a reliable and secure platform for asynchronous transfer of data and state between different application and devices.
+
+Data is transferred between different applications and services using messages. A message is in binary format and can contain JSON, XML, or just text. 
+
+Azure Service Fabric - is a distributed systems platform that makes it easy to package, deploy, and manage scalable and reliable micro-services. Service Fabric also addresses the significant challenges in developing and managing cloud applications. Developers and administrators can avoid complex infrastructure problems and focus on implementing mission-critical, demanding workloads that are scalable, reliable, and manageable. Service Fabric represents the next-generation middleware platform for building and managing these enterprise-class, tier-1, cloud-scale applications.
+
+Storage queues - which are part of the Azure storage infrastructure, feature a simple REST-based GET/PUT/PEEK interface, providing reliable, persistent messaging within and between services.
+
+Service Bus queues - are part of a broader Azure messaging infrastructure that supports queuing as well as publish/subscribe, and more advanced integration patterns. For more information about Service Bus queues/topics/subscriptions, see the overview of Service Bus.
+
+Azure Search - is a cloud search-as-a-service solution that delegates server and infrastructure management to Microsoft, leaving you with a ready-to-use service that you can populate with your data and then use to add search to your web or mobile application. Azure Search allows you to easily add a robust search experience to your applications using a simple REST API or .NET SDK without managing search infrastructure or becoming an expert in search.
+
+Dead letter queue - Messages are placed on the dead-letter sub-queue by the messaging system in the following scenarios.
+When a message expires and dead-lettering for expired messages is set to true in a queue or subscription.
+When the max delivery count for a message is exceeded on a queue or subscription.
+When a filter evaluation exception occurs in a subscription and dead-lettering is enabled on filter evaluation exceptions.
+
+Explain Azure Service Fabric
+============================
+Azure Service Fabric is a distributed platform designed by Microsoft to facilitate the development, deployment and management of highly scalable and customizable applications. The applications created in this environment consists of detached microservices that communicate with each other through service application programming interfaces.

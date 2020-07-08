@@ -1,0 +1,4 @@
+https://www.microsoft.com/handsonlabs
+https://ravikirans.com/az-300-azure-exam-study-guide/
+https://www.azure-heros.com/blog/azure-front-door-vs-azure-traffic-manager-vs-azure-application-gateway-vs-azure-load-balancer-vs-content-delivery-network-cdn
+https://docs.microsoft.com/en-us/azure/architecture/architectures/reference-architectures

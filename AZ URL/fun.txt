@@ -1,0 +1,66 @@
+https://stackoverflow.com/questions/45183820/how-to-pass-parameters-by-post-to-an-azure-function
+https://tutorials.visualstudio.com/azure-functions-cognitive/create-app
+http://dontcodetired.com/blog/post/Different-Ways-to-Parse-Http-Request-Data-in-Http-triggered-Azure-Functions
+https://softchris.github.io/pages/dotnet-serverless.html#let-s-code
+https://docs.microsoft.com/en-us/azure/azure-functions/functions-dotnet-class-library?wt.mc_id=personal-blog-chnoring
+https://docs.microsoft.com/en-us/azure/azure-functions/functions-test-a-function
+https://markheath.net/post/azure-functions-rest-csharp-bindings
+Service Principle
+===================
+https://circuitoverload.com/authenticating-to-azure-functions-using-a-service-principal-part-1
+https://circuitoverload.com/authenticating-to-azure-functions-using-a-service-principal-part-2
+
+https://blogs.endjin.com/2019/01/managing-applications-using-azure-ad-service-principals-and-managed-identities/
+https://www.rahulpnath.com/blog/how-to-authenticate-azure-function-with-azure-web-app-using-managed-service-identity/
+https://contos.io/working-with-identity-in-an-azure-function-1a981e10b900
+
+https://stackoverflow.com/questions/42482223/azure-functions-call-http-post-inside-function
+
+SignalR
+============
+https://www.youtube.com/watch?v=OWMBQ-nBrQI
+https://charliedigital.com/2019/09/02/azure-functions-signalr-and-authorization/
+
+[10:22 PM] Sireesha Kakarla
+    {
+
+"clientName": "NCOTest",
+
+"userName": "SIREESHA_AGENT",
+
+"password": "livevox2020",
+
+"agent": true
+
+}
+?[10:28 PM] Sireesha Kakarla
+    LV-Access
+0fdd7dd0-81ec-45ba-9d6a-47ca398d6805
+
+https://www.youtube.com/watch?v=C5cnZ-gZy2I
+
+
+access
+========
+https://www.codeproject.com/Questions/843001/Handling-fields-of-Attachment-type-in-MS-Access-us
+
+
+MS-Azure
+==============
+https://docs.microsoft.com/en-us/azure/
+
+
+Durable Function
+=======================
+
+https://dontcodetired.com/blog/post/Understanding-Azure-Durable-Functions-Part-2-Creating-Your-First-Durable-Function
+
+https://medium.com/@dan.cokely/azure-durable-functions-part-1-intro-f99ed8fb7b45
+https://medium.com/@tsuyoshiushio/durable-functions-101-35aa3919f182
+
+https://dontcodetired.com/blog/post/
+https://dontcodetired.com/blog/post/
+https://dontcodetired.com/blog/post/Understanding-Azure-Durable-Functions-Part-3-What-Is-DurabilityUnderstanding-Azure-Durable-Functions-Part-2-Creating-Your-First-Durable-FunctionUnderstanding-Azure-Durable-Functions-Part-1-Overview
+https://dontcodetired.com/blog/?tag=durfuncseries
+
+https://mikhail.io/2018/12/making-sense-of-azure-durable-functions/

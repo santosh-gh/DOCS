@@ -1,0 +1,14 @@
+SQL Managed Instance
+====================
+SQL Server environment where we continue using instance-level capabilities such are SQL common language runtime (CLR) integration, SQL Server Agent and cross-database querying etc without changing our application design.
+
+Managed Instance SQL characteristics
+====================================
+• Security isolation through Azure Virtual Network
+• Application surface compatibility, with these features:
+o SQL Server Agent and SQL Server Profiler
+o Cross-database references and queries, SQL CLR, replication, change data capture (CDC), and Service Broker
+• Database sizes up to 35 TB
+• Minimum-downtime migration, with these features:
+o Azure Database Migration Service
+o Native backup and restore, and log shipping 
