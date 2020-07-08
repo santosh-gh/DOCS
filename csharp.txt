@@ -1,0 +1,831 @@
+https://dotnettutorials.net/lesson/dotnet-framework/
+
+
+https://www.csharpstar.com/csharp-interview-questions-part-3/
+1. DIP - States that the high level modules should not depend upon low level modules, both should depend on abstrations
+
+2. Dependancy Injection - Dependency Injection (DI) is a software design pattern which allows us to develop loosely-coupled code. The intent of Dependency Injection is to make code maintainable. Dependency Injection helps to reduce the tight coupling among software components. Dependency Injection reduces the hard-coded dependencies among your classes by injecting those dependencies at run time instead of design time technically. We can implement by injecting by property, parameterzed constructor and parameterised method.
+
+3. Delegation Vs Event 
+- The basic difference between delegates and events is that delegates hold the reference of the methods and event provides a way to access that method using delegates.
+- A delegate is declared outside any class.An event is declared inside a class.
+- Delegates are independent of events.The event can not be created without delegates.
+
+A delegate is similar to a function pointer in C/C++. It holds a reference to a method and to an object instance (if the method is non-static). Delegates are usually multicast, i.e. they hold references to several object/method pairs.
+
+Delegates are especially used for implementing events and the call-back methods. All delegates are implicitly derived from the System.Delegate class.
+
+An event is a notification mechanism, based on delegates. The only thing it exposes publicly is a pair of methods (add/remove) to subscribe to or unsubscribe from the notification. A delegate type is used to define the signature of the handler methods, and the list of subscribers are (usually) stored internally as a delegate.
+
+3.1. Delegates are used to define callback methods and implement event handling, and they are declared using the "delegate" keyword. 
+
+3.2. Delegates have the following properties:
+3.3. The Delegate class is the base class for delegate types.
+
+Delegates are similar to C++ function pointers, but are type safe.
+Delegates allow methods to be passed as parameters.
+Delegates can be used to define callback methods.
+Delegates can be chained together; for example, multiple methods can be called on a single event.
+Methods don't need to match the delegate signature exactly. For more information, see Covariance and Contra variance.
+C# version 2.0 introduces the concept of Anonymous Methods, which permit code blocks to be passed as parameters in place of a separately defined method.
+
+4. Design Pattern
+
+Creational Patterns
+-------------------
+  Abstract Factory	Creates an instance of several families of classes
+  Builder		Separates object construction from its representation. This structural code demonstrates the Builder pattern in which complex objects are 				created in a step-by-step fashion. 
+  Factory Method	Creates an instance of several derived classes
+  Prototype		A fully initialized instance to be copied or cloned
+  Singleton		A class of which only a single instance can exist
+
+Structural Patterns
+-------------------
+  Adapter	Match interfaces of different classes
+  Bridge	Separates an object’s interface from its implementation
+  Composite	A tree structure of simple and composite objects
+  Decorator	Add responsibilities to objects dynamically
+  Facade	A single class that represents an entire subsystem
+  Flyweight	A fine-grained instance used for efficient sharing
+  Proxy		An object representing another object
+
+Behavioral Patterns
+-------------------
+  Chain of Resp.	A way of passing a request between a chain of objects
+  Command		Encapsulate a command request as an object
+  Interpreter		A way to include language elements in a program
+  Iterator		Sequentially access the elements of a collection
+  Mediator		Defines simplified communication between classes
+  Memento		Capture and restore an object's internal state
+  Observer		A way of notifying change to a number of classes
+  State			Alter an object's behavior when its state changes
+  Strategy		Encapsulates an algorithm inside a class
+  Template Method	Defer the exact steps of an algorithm to a subclass
+  Visitor		Defines a new operation to a class without change
+
+5.SOLID Principles
+---------------
+	Single Responsibility Principle (SRP) 	- a class should not be loaded with multiple responsibilities and a single responsibility should not be spread across 					       		  multiple classes or mixed with other responsibilities. 
+	Open Closed Principle (OCP)	      	- Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.
+	Liskov Substitution Principle (LSP)	- Functions that use pointers or references to base classes must be able to use objects of derived classes without 						  	  knowing it. It states that the child class should be perfectly substitutable for their parent class. If class C is 						  	  derived from P then C should be substitutable for P.
+	Interface Segregation Principle (ISP)	- No client should be forced to implement methods which it does not use, and the contracts should be broken down to 						  	  thin ones.Using ISP, we can create separate interfaces for each operation or requirement rather than having a single 						  	  class to do the same work.
+	Dependency Inversion Principle (DIP)	- High-level modules should not depend on low-level modules. Both should depend on abstractions.Abstractions should not 						  depend on details. Details should depend on abstractions.
+
+
+ACID is a acronym which is commonly used to define the properties of a relational database system, it stand for following terms
+
+Atomicity - This property guarantees that if one part of the transaction fails, the entire transaction will fail, and the database state will be left unchanged.
+Consistency - This property ensures that any transaction will bring the database from one valid state to another.
+Isolation - This property ensures that the concurrent execution of transactions results in a system state that would be obtained if transactions were executed serially.
+Durable - means that once a transaction has been committed, it will remain so, even in the event of power loss.
+
+6. Inheritance Vs Composition
+
+In inheritance, there is an image of the base class in the derived class object, so the image of the base class is created when the derived class object is created.	Composition allows late creation of the backend class object until and unless they are not really required.
+
+Base class remains a part of the derived class object throughout the life of the derived class.	
+In composition, life of the backend class is independent and we can change back end object dynamically.
+
+Inheritance is static binding (compile time binding)	
+Composition is dynamic binding (run time binding)
+
+Inheritance can denote an "is - a" relationship between classes.	
+Composition can be denoted as being an "as a part" or "has a" relationship between classes.
+
+Inheritance comes with polymorphism.	NA
+In inheritance, there is a single invocation of an inherited base class so there is no extra cost for invocation.
+The explicit method invocation (forwarding or delegation) has a performance cost (note that performance depends on many factors).
+
+A change in the base class interface cannot ripple down the inheritance hierarchy to a derived class.	
+It is easy to change the interface of a back-end class and front-end class
+
+In inheritance, it is not required to implement all base class methods within the derived class.	
+In composition, all methods provided by composed classes must be implemented in the front end class.
+
+The derived class and base class interfaces are tightly coupled.	
+The front-end and back-end interfaces are loosely coupled.
+
+7. Static Class Vs Singleton Class
+
+You cannot create the instance of static class.
+Loaded automatically by the .NET Framework common language runtime (CLR) when the program or namespace containing the class is loaded.
+Static Class cannot have constructor.
+We cannot pass the static class to method.
+We cannot inherit Static class to another Static class in C#.
+A class having all static methods.
+Better performance (static methods are bonded on compile time)
+
+Singleton:-
+
+You can create one instance of the object and reuse it.
+Singleton instance is created for the first time when the user requested.
+Singleton class can have constructor.
+You can create the object of singleton class and pass it to method.
+Singleton class does not say any restriction of Inheritance.
+We can dispose the objects of a singleton class but not of static class.
+Methods can be overridden.
+Can be lazy loaded when need (static classes are always loaded).
+We can implement interface(static class can not implement interface).
+
+8. Global Assembly Cache (GAC)
+GAC is a folder in Windows directory to store the . NET assemblies that are specifically designated to be shared by all applications executed on a system. Assemblies can be shared among multiple applications on the machine by registering them in global Assembly cache(GAC).
+
+Install - Give a strong Name. After that Just drag and drop/ CopyPaste an assembly to an assembly folder.Using Microsoft .NET Framework SDK. From Command line
+
+9. Satellite assembly - A satellite assembly is a .NET Framework assembly containing resources specific to a given language. Using satellite assemblies, you can place resources for different languages in different assemblies, and the correct assembly is loaded into memory only if the user selects to view the application in that language.
+
+10. ABSTRACT CLASS Vs INTERFACE
+
+It contains both declaration and definition part.	
+It contains only a declaration part.
+
+Multiple inheritance is not achieved by abstract class.	
+Multiple inheritance is achieved by interface.
+
+It contain constructor.	
+It does not contain constructor.
+
+It can contain static members.	
+It does not contain static members.
+
+It can contain different types of access modifiers like public, private, protected etc.	
+It only contains public access modifier because everything in the interface is public.
+
+The performance of an abstract class is fast.	
+The performance of interface is slow because it requires time to search actual method in the corresponding class.
+
+It is used to implement the core identity of class.
+It is used to implement peripheral abilities of class.
+
+A class can only use one abstract class.	
+A class can use multiple interface.
+
+If many implementations are of the same kind and use common behavior, then it is superior to use abstract class.	
+If many implementations only share methods, then it is superior to use Interface.
+
+Abstract class can contain methods, fields, constants, etc.	
+Interface can only contain methods .
+
+It can be fully, partially or not implemented.	
+It should be fully implemented.
+
+11. Static Constructor - is used to perform a particular action only once throughout the application. If we declare a constructor as static, then it will be invoked only once irrespective of number of class instances and it will be called automatically before the first instance is created.
+Static constructors cannot be inherited or overloaded. A static constructor cannot be called directly and is only meant to be called by the common language runtime(CLR). 
+
+It is invoked automatically. The user has no control on when the static constructor is executed in the program.A static constructor does not take access modifiers or have parameters. 
+
+A static constructor is called automatically to initialize the class before the first instance is created or any static members are referenced. A static constructor cannot be called directly.
+
+12. Array Vs ArrayList
+
+An Array is strongly-typed. We can store only the same type of data.	
+ArrayList is a non-generic collection type. ArrayList's internal Array is of the object type. So, we can store multiple types of data in ArrayList.
+
+Array stores a fixed number of elements.	
+ArrayList is dynamic in term of capacity. If the number of element exceeds, ArrayList will increase to double its current size.
+
+Array provides better performance than ArrayList.	
+If we are using a large number of ArrayList then it degrades performance because of boxing and unboxing.
+
+Array uses static helper class Array which belongs to system namespace	
+ArrayList implements an IList interface so, it provides a method that we can use for easy implementation.
+
+Array belongs to namespace System	
+ArrayList belongs to namespace System.Collection
+
+The Array cannot accept null.	
+An ArrayList can accept null.
+Example:string[] array1=new string[5];array1[0]=”Hello”;array1[1]=”Bye”;	
+Example:ArrayList a1=new ArryList();a1.add(null);a1.insert(1,”hi”);a1.add(3);a1.add(8.23);
+
+13. Hashtable Vs Dictionary
+===========================
+A Hashtable is a non-generic collection.	
+A Dictionary is a generic collection.
+
+Hashtable is defined under System.Collections namespace.	
+Dictionary is defined under System.Collections.Generic namespace.
+
+In Hashtable, you can store key/value pairs of the same type or of the different type.	
+In Dictionary, you can store key/value pairs of same type.
+
+In Hashtable, there is no need to specify the type of the key and value.	
+In Dictionary, you must specify the type of key and value.
+
+The data retrieval is slower than Dictionary due to boxing/ unboxing.	
+The data retrieval is faster than Hashtable due to no boxing/ unboxing.
+
+In Hashtable, if you try to access a key that doesn’t present in the given Hashtable, then it will give null values.	
+In Dictionary, if you try to access a key that doesn’t present in the given Dictionary, then it will give error.
+
+It is thread safe.	
+It is also thread safe but only for public static members.
+
+It doesn’t maintain the order of stored values.	
+It always maintain the order of stored values.
+
+14. IDisposable - is an interface that contains a single method, Dispose(), for releasing unmanaged resources, like files, streams, database connections and so on. This method is implemented explicitly in the code when we need to clean up a disposable object and to release unmanaged resources that this disposable object holds.
+
+15. Sealed -Sealed classes are used to restrict the inheritance feature of object oriented programming. Once a class is defined as a sealed class, this class cannot be inherited. So when you're designing a class library and want to restrict your classes not to be derived by developers, you may want to use sealed classes.
+
+Sealed class is used to stop a class to be inherited. You cannot derive or extend any class from it.
+Sealed method is implemented so that no other class can overthrow it and implement its own method.
+The main purpose of the sealed class is to withdraw the inheritance attribute from the user so that they can’t attain a class from a sealed class. Sealed classes are used best when you have a class with static members.
+
+Points to Remember while working with Sealed Class
+A sealed class is completely opposite to an abstract class.
+This sealed class cannot contain abstract methods.
+It should be the bottom most class within the inheritance hierarchy.
+A sealed class can never be used as a base class.
+This sealed class is specially used to avoid further inheritance.
+The keyword sealed can be used with classes, instance methods, and properties.
+
+Sealed Methods
+==============
+The method that is defined in a parent class, if that method cannot be overridden under a child class, we call it a sealed method.
+
+By default, every method is a sealed method because overriding is not possible unless the method is not declared as virtual in the parent class.
+
+If a method is declared as virtual in a class, any child class of it can have the rights to override that method.
+
+
+16. == Vs .Equals() - Both the == Operator and the Equals() method are used to compare two value type data items or reference type data items. This article explains the basic difference between these two. The Equality Operator ( ==)  is the comparison operator and the Equals() method compares the contents of a string. The == Operator compares the reference identity while the Equals() method compares only contents.
+
+16. If a finally block throws an exception what exactly happens ?
+
+- That exception propagates out and up, and will (can) be handled at a higher level.
+- The finlly block execution stos at the point where the execution is thrown
+- If the finally block is being executed after an exception has occured in the try block, and if that exection is not handled and if the finally block throws an exception
+then the original exception that occured in the try block is lost.
+
+17. Final class can't be inherited, final method can't be overridden and final variable value can't be changed. Finally is used to place important code, it will be executed whether exception is handled or not. Finalize is used to perform clean up processing just before object is garbage collected.
+
+final – constant declaration.
+finally – The finally block always executes when the try block exits, except System.exit(0) call. This ensures that the finally block is executed even if an unexpected exception occurs.
+finalize() – method helps in garbage collection. A method that is invoked before an object is discarded by the garbage collector, allowing it to clean up its state.
+
+18. Generics - It allows you to define the type-safe data structures. This out-turn in a remarkable performance boost and high-grade code, because it helps to reuse data processing algorithms without replicating type-specific code.
+
+Generics is a technique that improves your programs in many ways such as:
+
+It helps you in code reuse, performance and type safety.
+You can create your own generic classes, methods, interfaces and delegates.
+You can create generic collection classes. The .NET framework class library contains many new generic collection classes in System.Collections.Generic namespace.
+You can get information on the types used in generic data type at run-time.
+
+REF Vs OUT
+----------
+It is necessary the parameters should initialize before it pass to ref.
+It is not necessary to initialize parameters before it pass to out.
+
+It is not necessary to initialize the value of a parameter before returning to the calling method.
+It is necessary to initialize the value of a parameter before returning to the calling method.
+
+The passing of value through ref parameter is useful when the called method also need to change the value of passed parameter.	
+The declaring of parameter through out parameter is useful when a method return multiple values.
+
+When ref keyword is used the data may pass in bi-directional.	When out keyword is used the data only passed in unidirectional.
+Note: Both ref and out parameter treated same at compile-time but different at run-time.
+
+Managed Vs. Unmanaged Code
+
+Managed Code - The code, which is developed in .NET framework is known as managed code. This code is directly executed by CLR with the help of managed code execution. Any language that is written in .NET Framework is managed code.
+
+Unmanaged Code - The code, which is developed outside .NET framework is known as unmanaged code. Applications that do not run under the control of the CLR are said to be unmanaged, and certain languages such as C++ can be used to write such applications, which, for example, access low - level functions of the operating system. Background compatibility with the code of VB, ASP and COM are examples of unmanaged code.
+
+Boxing Vs. Unboxing
+
+Boxing - Boxing is the process of converting a value type data type to the object or to any interface data type which is implemented by this value type. When the CLR boxes a value means when CLR is converting a value type to Object Type, it wraps the value inside a System.Object and stores it on the heap area in application domain.
+
+Unboxing - Unboxing is also a process which is used to extract the value type from the object or any implemented interface type. Boxing may be done implicitly, but unboxing have to be explicit by code.
+
+Anonymous types - allow us to create a new type without defining them. This is way to defining read only properties into a single object without having to define type explicitly. Here Type is generating by the compiler and it is accessible only for the current block of code. The type of properties is also inferred by the compiler.
+
+
+static 
+======
+static variables are common to all the objects
+each static variable is shared among al the objects of the same class.
+
+
+const Vs readonly
+
+The value of constant is evaluated at compile time
+A variable declared as const must be assigned a value at declaration.
+can not change its value once it is assigned
+They are implicitly static by default
+
+They can be either instance-level or static
+The value is evaluated at run time
+readonly can be initialized either at declaration time or in the constructor.
+
+The dynamic type - Dynamic type variables are declared using the "dynamic" keyword. A dynamic type variable bypasses the compile-time type checking and its operations are resolved at run time. In dynamic type, if the operations are not valid then the exception would be thrown at run time, not at compile time.
+
+var Vs dynamic
+
+var
+
+Type of variable declared dicided at compile time
+Errors are caught at compile time
+Vsual Studio shows intellisense since type of variable asigned is known at compile time
+
+dynamic
+
+Type of variable declared dicided at runtime
+Errors are caught at run time
+Vsual Studio does not show intellisense since type of variable asigned is known at compile time
+
+
+
+
+
+Reflection
+==========
+It is the process of describing the metadata of types, methods and fields in a code. The namespace System.Reflection enables you to obtain data about the loaded assemblies, the elements within them like classes, methods and value types. 
+
+Indexer
+=======
+Also known as an indexed property, an indexer is a class property allowing accessing a member variable of some class using features of an array. Used for treating an object as an array, indexer allows using classes more intuitively. 
+
+Constructor Chaining - Constructor chaining in C# is a way of connecting two or more classes in a relationship as an inheritance. Every child class constructor is mapped to the parent class constructor implicitly by using the base keyword in constructor chaining.
+
+Managed code - is a code which is executed by CLR (Common Language Runtime) i.e all application code based on .Net Platform. It is considered as managed because of the .Net framework which internally uses the garbage collector to clear up the unused memory.
+
+Unmanaged code - is any code that is executed by application runtime of any other framework apart from .Net. The application runtime will take care of memory, security and other performance operations.
+
+Partial class – Allows its members to be divided or shared with multiple .cs files. It is denoted by the keyword Partial.
+
+Sealed class – It is a class which cannot be inherited. To access the members of a sealed class, we need to create the object of the class.  It is denoted by the keyword Sealed.
+
+Abstract class – It is a class whose object cannot be instantiated. The class can only be inherited. It should contain at least one method.  It is denoted by the keyword abstract.
+
+Static class – It is a class which does not allow inheritance. The members of the class are also static.  It is denoted by the keyword static. This keyword tells the compiler to check for any accidental instances of the static class.
+
+Steps in code compilation
+Compiling the source code into Managed code by C# compiler.
+Combining the newly created code into assemblies.
+Loading the Common Language Runtime(CLR).
+Executing the assembly by CLR.
+
+Virtual method - must always have a default implementation. However, it can be overridden in the derived class, though not mandatory. It can be overridden using override keyword.
+
+Abstract method - does not have an implementation. It resides in the abstract class. It is mandatory that the derived class implements the abstract method. An override keyword is not necessary here though it can be used.
+
+Exception handling 
+
+try – Contains a block of code for which an exception will be checked.
+catch – It is a program that catches an exception with the help of exception handler.
+finally – It is a block of code written to execute regardless whether an exception is caught or not.
+Throw – Throws an exception when a problem occurs.
+
+finally - is called after the execution of try and catch block. It is used for exception handling. Regardless of whether an exception is caught or not, this block of code will be executed. Usually, this block will have clean-up code.
+
+finalize - is called just before garbage collection. It is used to perform clean up operations of Unmanaged code. It is automatically called when a given instance is not subsequently called.
+
+
+Types of Delegates are:
+
+Single Delegate – A delegate which can call a single method.
+
+Multicast Delegate – A delegate which can call multiple methods. + and – operators are used to subscribe and unsubscribe respectively.
+
+Generic Delegate – It does not require an instance of delegate to be defined. It is of three types, Action, Funcs and Predicate.
+
+Action– In the above example of delegates and events, we can replace the definition of delegate and event using Action keyword. The Action delegate defines a method that can be called on arguments but does not return a result
+Public delegate void deathInfo();
+
+Public event deathInfo deathDate;
+
+//Replacing with Action//
+
+Public event Action deathDate;
+
+Action implicitly refers to a delegate.
+
+Func – A Func delegate defines a method that can be called on arguments and returns a result.
+Func <int, string, bool> myDel is same as delegate bool myDel(int a, string b);
+
+Predicate – Defines a method that can be called on arguments and always returns the bool.
+Predicate<string> myDel is same as delegate bool myDel(string s);
+
+Lock keyword - ensures that only one thread can enter a particular section of the code at any given time. In the above Example, lock(ObjA) means the lock is placed on ObjA until this process releases it, no other thread can access ObjA.
+
+Serialization - is a process of converting a code to its binary format. Once it is converted to bytes, it can be easily stored and written to a disk or any such storage devices. Serializations are mainly useful when we do not want to lose the original form of the code and it can be retrieved anytime in the future.
+
+Finalize
+--------
+Finalize is used to free unmanaged resources that are not in use, like files, database connections in the application domain and more. These are resources held by an object before that object is destroyed.
+In the Internal process, it is called by Garbage Collector and can’t be called manual by user code or any service.
+Finalize belongs to System.Object class.
+Implement it when you have unmanaged resources in your code, and make sure that these resources are freed when the Garbage collection happens.
+
+Dispose
+-------
+Dispose is also used to free unmanaged resources that are not in use like files, database connections in the Application domain at any time.
+Dispose explicitly it is called by manual user code.
+If we need to dispose method so must implement that class by IDisposable interface.
+It belongs to IDisposable interface.
+Implement this when you are writing a custom class that will be used by other users.
+
+
+String
+------
+ 
+String is an immutable object. Immutable is when we create string objects in code so we cannot modify or change that object in any operations like insert new value, replace or append any value with existing value in a string object. When we have to do some operations to change string simply it will dispose of the old value of string object and it will create a new instance in memory for hold the new value in string object
+
+It’s an immutable object that holds a string value.
+Performance-wise, string is slow because it creates a new instance to override or change the previous value.
+String belongs to the System namespace.
+
+StringBuilder
+-------------
+ 
+System.Text.Stringbuilder is a mutable object which also holds the string value, mutable means once we create a System.Text.Stringbuilder object. We can use this object for any operation like insert value in an existing string with insert functions also replace or append without creating a new instance of System.Text.Stringbuilder for every time so it’s using the previous object. That way, it works fast compared to the System.String. Let’s see an example to understand System.Text.Stringbuilder.
+
+StringBuilder is a mutable object.
+Performance-wise StringBuilder is very fast because it will use the same instance of StringBuilder object to perform any operation like inserting a value in the existing string.
+StringBuilder belongs to System.Text.Stringbuilder namespace.
+
+nullable - type is a data type is that contains the defined data type or the null value.
+The important things you need to know about nullable type conversions are the following:
+
+• There is an implicit conversion between a non-nullable type and its nullable version. That is, no cast is needed.
+• There is an explicit conversion between a nullable type and its non-nullable version.
+
+---------------
+
+An attribute - is a declarative tag that is used to convey information to runtime about the behaviors of various elements like classes, methods, structures, enumerators, assemblies etc. in your program. You can add declarative information to a program by using an attribute. 
+
+Predefined Attributes
+The .Net Framework provides three pre-defined attributes -
+
+AttributeUsage
+Conditional
+Obsolete
+
+
+throw Vs throw ex
+=================
+The difference between "throw" and "throw ex" is that "throw" is used for preserving original error stack whereas "throw ex" has a throw point through which it can trace the stack. For more accurate, error-free information, the throw is advisable to use.
+
+Similarities:
+Let’s first see what is similar in both.
+Both are used to throw exception in catch block to log message
+Both contains same message of exception
+Difference:
+Now let’s see what is difference.
+throw is used to throw current exception while throw(ex) mostly used to create a wrapper of exception.
+throw(ex) will reset your stack trace so error will appear from the line where throw(ex) written while throw does not reset stack trace and you will get information about original exception.
+In MSIL code when you use throw(ex) it will generate code as throw and if you use throw it will create rethrow.
+
+---------------------
+"is" Vs "as" Operaror
+operator "is" used for checking the compatibility of an object for a given type and returning to the boolean for the results.
+
+operator "as" used for casting of an object to a type or to a class and return the object.
+The "as" operator does the same job of ‘is‘ operator but the difference is instead of bool, it returns the object if they are compatible to that type, else it returns null. In otherwords, The "as" operator is used to perform conversions between compatible types.
+
+
+===================
+
+Access Modifier
+
+public - Accessible in any object
+private - accessed by only in the same class
+protected - accessed by the child class
+internal - accessed by the same project, same library, same assembly
+protected internal - protected + internal
+-----------------------
+nullable types - Nullable types are defined as the types which can either take the normal value or the null value.
+
+-------------------------
+static class vs sealed class
+
+Static class:
+1) A static class can not be instantiated. Means you can't create instance of any static class.
+2) A static class can have only static member (e.g static method, property, and variables).
+3) A static class restrict the user to call default constructor of the class.
+4) Static classes can only have static constructor to initialize static members.
+5) Static classes are sealed so they can not be inherited.
+
+Sealed Class:
+1) When a class defined as sealed its not possible to inherit.
+2) A Sealed class is last class of Inheritance feature.
+3) Use the sealed modifier in a class declaration to prevent inheritance of the class.
+4) It is not permitted to use the abstract modifier with a sealed class.
+5) Structs are implicitly sealed; therefore, they cannot be inherited.
+-------------------------
+
+Code Execution Process
+
+1. Compiler time process
+
+- The .Net framework language compilers translate the source code into Microsoft Intermediate Language (MSIL) or (IL) code.
+
+SOURCE CODE ----->.NET COMLIPER------> BYTE CODE (MSIL + META DATA)
+
+2. Runtime process.
+
+- The Common Language Runtime (CLR) includes a JIT compiler for converting MSIL to native code.
+- The JIT Compiler in CLR converts the MSIL code into native machine code that is then executed by the OS.
+- During the runtime of a program the "Just in Time" (JIT) compiler of the Common Language Runtime (CLR) uses the Metadata and   converts Microsoft Intermediate Language (MSIL) into native code.
+
+BYTE CODE (MSIL + META DATA) ----- Just-In-Time (JIT) compiler------> NATIVE CODE
+
+----------------------
+
+race condition - A race condition is defined as a situation in which two threads are accessing the same source and are trying to change at the same time. The prediction of the thread which could come first is difficult.
+------------------------
+deadlock - Deadlock is defined as the situation in which the process does not complete the execution as two or more processes are waiting for the completion of the process. This situation mainly arises during multi-threading.
+
+------------------------------
+
+states of a thread - Following are the different states of s thread:
+
+Unstarted: 	The thread is created
+Running: 	The execution of the thread starts
+WaitSleepJoin: 	The thread is asked to sleep, asks other thread to wait and asks the other thread to join
+Suspended: 	The thread has been suspended
+Aborted: 	The thread is dead but didn’t change the state
+Stopped: 	The thread has been stopped
+
+----------------------------------
+properties of the thread class - Following are the properties of the thread class:
+
+IsAlive: 	When the thread is active, it contains the true value
+Name: 		It is used for setting the name for a thread and also for returning the name of the thread
+Priority: 	The value is returned to the task set as per operating system
+IsBackground: 	It is the deciding factor for a thread whether it should be in the background or the foreground
+ThreadState: 	This explains the state of the thread
+
+---------------------------------
+
+methods used for handling the multi-threaded operations - Following are the few methods that are used for handling the multi-threaded operations:
+
+Start
+Sleep
+Abort
+Suspend
+Resume
+Join
+-----------------------------
+
+basic string operations - Following are the basic string operations:
+
+Concatenate: 			System.String.Concat is the command used
+Modify: 			It is mainly used for replacing and trimming of the string
+Search: 			For searching a particular string, Startwith and Endswith methods are used
+Compare: 			Two parameters are considered for comparison. Original string and the string to be compared are used. System.StringComparison() is the command used for comparison
+
+----------------------------
+
+properties of an array - Following are the properties of an array:
+
+Length: 	Used for getting the total number of elements in an array
+IsFixedSize: 	Used for understanding whether the array has a fixed size or not
+IsReadOnly: 	Used for understanding whether the array is read-only or not
+
+---------------------------
+Name some of the I/O classes - Following are the I/O classes of C#:
+
+File: 		It is used for manipulating the file
+StreamWriter: 	The characters in a stream are wrote using StreamWriter
+StreamReader: 	The characters in a stream are read using StreamReader
+StringWriter: 	Writing of string buffer is done using StringWriter
+StringReader: 	Reading of string buffer is done using StringReader
+Path: 		Path related operations are conducted using path class
+
+-------------------------------
+
+Different types of value types in C# - Following are the different types of value in C#:
+
+float
+long
+int
+decimal
+double
+byte
+enum
+
+----------------------------
+
+Different types of reference in C# - Following are the different types of reference in C#:
+
+object
+class
+interface
+string
+
+------------------------------
+
+interface - interface-based design concepts provides loose coupling, component-based programming, easier maintainability, makes your code base more scalable and makes code reuse much more accessible because the implementation is separated from the interface. Interfaces add a plug and play like architecture into your applications. Interfaces help define a contract (agreement or blueprint, however you chose to define it), between your application and other objects. This indicates what sort of methods, properties, and events are exposed by an object.
+
+An interface only contains declarations of method, properties, indexers, and events.
+An interface can be implement implicitly or explicitly by a class or struct.
+A class or struct which implements an interface, must use 'public' access modifier.
+An interface cannot include private, protected, or internal members. All the members are public by default.
+Do not include 'public' in an interface as all the members are public by default. C# will give compile-time error if used 'public'.
+Implement interface explicitly using InterfaceName. with all the members.
+An interface can inherit one or more interfaces.
+
+------------------------------
+
+object Vs dynamic
+Object:
+The Compiler has little information about the type. It's not compiler safe.
+When using an object, you  need to cast the object variable to the original type to use it and do the desired operations. In the first difference, the following example shows an error.
+
+dynamic: 
+In a dynamic variable, the compiler doesn't have any information about the type of variable.
+Casting is not required but you need to know the properties and methods related to the stored type.
+
+-------------------------------
+
+Array.CopyTo copies the elements of one array to another pre-existing array starting from a given index (usually 0). Both arrays must be single dimensional.
+
+Array.Clone creates a copy of an array as an object. It therefore needs to be cast to the actual array type before it can be used to do very much. It works on both single and multi-dimensional arrays.
+
+
+In both cases, the copies are shallow copies i.e. in the case of reference types only the references are copied - the objects to which they refer are not copied.
+
+--------------------------------
+
+Static class Vs Singleton instance
+
+– In c# a static class cannot implement an interface. When a single instance class needs to implement an interface for some business reason or IoC purposes, you can use the Singleton pattern without a static class.
+
+– You can clone the object of Singleton but, you can not clone the static class object
+
+– Singleton object stores in Heap but, static object stores in stack
+
+– A singleton can be initialized lazily or asynchronously while a static class is generally initialized when it is first loaded
+
+
+---------------------------------
+
+Why singleton pattern is considered an Anti-pattern ?
+– Singletons aren’t easy to handle with unit tests. You can’t control their instantiation and they may retain state across invocations.
+– Memory allocated to an Singleton can’t be freed.
+– In multithreaded environment, access to the singleton object may have to be guarded (e.g. via synchronization).
+– Singletons promote tight coupling between classes, so it is hard to test
+
+-------------------------------
+Object Pooling in C#?
+
+Object Pool is a container of objects that are ready for use. Whenever there is a request for a new object, the pool manager will take the request and it will be served by allocating an object from the pool.So it reduces the load of object creation.
+
+-------------------------------
+
+== Vs.Equals
+== performs an identity comparison, i.e. it will only return true if both references point to the same object. 
+While Equals() method is expected to perform a value comparison, i.e. it will return true if the references point to objects that are equivalent.
+
+-------------------------------
+string Vs String
+
+String stands for System.String and it is a .NET Framework type. string is an alias in the C# language for System.String. Both of them are compiled to System.String in IL (Intermediate Language), so there is no difference.
+
+-------------------------------
+
+EXE Vs DLL
+
+EXE:
+– Executable file, can run independently
+– It runs in a separate process
+– It can’t be reused in application
+– it has a main function
+DLL:
+– Dynamic link library is used as part of EXE or other DLL’s
+– It runs in application process memory,
+– It can be reused in application
+– It does not have a main function
+
+---------------------------------
+
+Process Vs Thread
+
+Process:
+– An executing instance of a program is called a process.
+– Some operating systems use the term ‘task‘ to refer to a program that is being executed.
+– A process is always stored in the main memory also termed as the primary memory or random access memory.
+– Therefore, a process is termed as an active entity. It disappears if the machine is rebooted.
+– Several process may be associated with a same program.
+– On a multiprocessor system, multiple processes can be executed in parallel.
+– On a uni-processor system, though true parallelism is not achieved, a process scheduling algorithm is applied and the processor is scheduled to execute each process one at a time yielding an illusion of concurrency.
+
+Thread:
+– A thread is a subset of the process.
+– It is termed as a ‘lightweight process’, since it is similar to a real process but executes within the context of a process and shares the same resources allotted to the process by the kernel.
+– Usually, a process has only one thread of control – one set of machine instructions executing at a time.
+– A process may also be made up of multiple threads of execution that execute instructions concurrently.
+– Multiple threads of control can exploit the true parallelism possible on multiprocessor systems.
+– On a uni-processor system, a thread scheduling algorithm is applied and the processor is scheduled to run each thread one at a time.
+– All the threads running within a process share the same address space, file descriptors, stack and other process related attributes.
+– Since the threads of a process share the same memory, synchronizing the access to the shared data withing the process gains unprecedented importance.
+
+---------------------------------
+System Exception Vs Application Exception
+
+System exceptions are derived directly from a base class System.SystemException. A System level Exception is normally thrown when a nonrecoverable error has occurred.
+Application exceptions can be user defined exceptions thrown by the applications. If you are designing an application that needs to create its own exceptions class, you are advised to derive custom exceptions from the System.ApplicationException class. It is typically thrown when a recoverable error has occurred.
+
+-------------------------------
+
+Tuples in C#?
+Tuples are commonly used in four ways:
+
+– To represent a single set of data. For example, a tuple can represent a database record, and its components can represent individual fields of the record.
+– To provide easy access to, and manipulation of, a data set.
+– To return multiple values from a method without using out parameters
+– To pass multiple values to a method through a single parameter. For example, the Thread.Start(Object) method has a single parameter that lets you supply one value to the method that the thread executes at startup time. If you supply a Tuple object as the method argument, you can supply the thread’s startup routine with three items of data.
+--------------------------------
+Monitor Vs lock
+
+Monitor and lock is the way to provide thread safety in a multithreaded application in C#.
+Lock is the keyword in C# that will ensure one thread is executing a piece of code at one time. The lock keyword ensures that one thread does not enter a critical section of code while another thread is in that critical section.
+
+--------------------------------
+
+What is the use of the IDisposable interface in C#
+The primary use of the IDisposable interface is to clean up unmanaged resources.”unmanaged” means things like database connections, sockets, window handles, etc.The garbage collector doesn’t know how to call DeleteHandle() on a variable of type IntPtr, it doesn’t know whether or not it needs to call DeleteHandle().
+
+So Microsoft has faciliated the Idisposable Interface and Dispose method to clean up unmanaged resources.
+
+--------------------------------
+
+Async Method
+
+An async method is a method that returns to the calling method before completing all its work, and then completes its work while the calling method continues its execution.
+
+An async method has the following characteristics:
+
+– An async method must have the async keyword in its method header, and it must be before the return type.
+– This modifier doesn’t do anything more than signal that the method contains one or more await expressions.
+– It contains one or more await expressions. These expressions represent tasks that can be done asynchronously.
+– It must have one of the following three return types.
+- void :If the calling method just wants the async method to execute, but doesn’t need any further interaction with it
+- Task : If the calling method doesn’t need a return value from the async method, but needs to be able to check on the async method’s state
+- Task :If the calling method is to receive a value of type T back from the call, the return type of the async method must be Task
+– An async method can have any number of formal parameters of any types but it cannot be out or ref parameters.
+– The name of an async method should end with the suffix Async.
+– Otherthan Methods, lambda expressions and anonymous methods can also act as async objects.
+====================
+CLR is the heart of .NET Framework and it contains the following components.
+
+-Security Manager
+-JIT Compiler
+-Memory Manager
+-Garbage Collector
+-Exception Manager
+-Common Language Specification (CLS)
+-Common Type System (CTS)
+======================
+
+Strong Typing vs Weak Typing
+============================
+Strong typing means that the type check is done at compile time and weak typing means that the type check is done at run time. 
+.NET languages incorporate strong typing.
+
+IEnumerable Vs IQueryable
+==========================
+Namespace	
+System.Collections Namespace	
+System.Linq Namespace
+
+How does it work	
+
+While querying data from database, IEnumerable executes select query on server side, load data in-memory on client side and then filter data. Hence does more work and becomes slow.	
+
+While querying data from database, IQueryable executes select query on server side with all filters. Hence does less work and becomes fast.
+
+Suitable for	
+LINQ to Object and LINQ to XML queries	
+LINQ to SQL queries
+
+When to use	
+When querying data from in-memory collections like List, Array, etc.	
+When querying data from out-memory (like remote database, service) collections.
+
+
+Tuple
+=====
+A tuple is a data structure that contains a sequence of elements of different data types. It can be used where you want to have a data structure to hold an object with properties, but you don't want to create a separate type for it.
+
+Tuples can be used in the following scenarios:
+
+When you want to return multiple values from a method without using ref or out parameters.
+When you want to pass multiple values to a method through a single parameter.
+When you want to hold a database record or some values temporarily without creating a separate class.
+
+=============
+object type of array can store any type of data
+we can add any data type to a collection type ArrayList
+
+==================
+by default class and interface are internal
+we cant declare variable in interface
+interface can inherit from interface
+if two interface have same method then how to impleent the method. ans- implement explicitely as inf.save(){}
+can't inherit the class with private constructor
+use static constructor only when all the members in the class are static or it is a singleton class
+

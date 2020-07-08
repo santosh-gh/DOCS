@@ -1,0 +1,151 @@
+API - is an application programming interface. It is a set of rules that allow programs to talk to each other. The developer creates the API on the server and allows the client to talk to it.
+
+REST determines how the API looks like. It stands for “Representational State Transfer”. It is a set of rules that developers follow when they create their API. One of these rules states that you should be able to get a piece of data (called a resource) when you link to a specific URL.
+
+Principles of REST
+Client–server – By separating the user interface concerns from the data storage concerns, we improve the portability of the user interface across multiple platforms and improve scalability by simplifying the server components.
+
+Stateless – Each request from client to server must contain all of the information necessary to understand the request, and cannot take advantage of any stored context on the server. Session state is therefore kept entirely on the client.
+
+Cacheable – Cache constraints require that the data within a response to a request be implicitly or explicitly labeled as cacheable or non-cacheable. If a response is cacheable, then a client cache is given the right to reuse that response data for later, equivalent requests.
+
+Uniform interface – By applying the software engineering principle of generality to the component interface, the overall system architecture is simplified and the visibility of interactions is improved. In order to obtain a uniform interface, multiple architectural constraints are needed to guide the behavior of components. REST is defined by four interface constraints: identification of resources; manipulation of resources through representations; self-descriptive messages; and, hypermedia as the engine of application state.
+
+Layered system – The layered system style allows an architecture to be composed of hierarchical layers by constraining component behavior such that each component cannot “see” beyond the immediate layer with which they are interacting.
+
+Code on demand (optional) – REST allows client functionality to be extended by downloading and executing code in the form of applets or scripts. This simplifies clients by reducing the number of features required to be pre-implemented.
+
+A request consists of four parts.
+--------------------------------
+The endpoint
+The method
+The headers
+The data (or body)
+
+Tools
+------
+Curl
+Postman
+
+--------------------------------
+Rest Design Principle:
+
+1. Everything is Resource
+2. Each Resource is Identifiable by unique URI
+3. Allows multple representations for the same Resource
+4. Use the standard HTTP Methods
+5. Communication should be always stateless
+
+----------------------------------
+Rest Arcitectral Goals
+
+1. Visibility
+2. Reliability
+3. Scalability
+4. Perforamance
+6. Portablity
+7. Simplicity
+
+------------------------------------
+
+HTTP Status Codes
+
+200 – OK, shows success.
+201 – CREATED, when a resource is successful created using POST or PUT request. Return link to newly created resource using location header.
+204 – NO CONTENT, when response body is empty
+304 – NOT MODIFIED, used to reduce network bandwidth usage in case of conditional GET requests
+400 – BAD REQUEST, states that invalid input is provided
+401 – FORBIDDEN, states that user is not having access to method being used
+404 – NOT FOUND, states that method is not available
+409 – CONFLICT, states conflict situation while executing the method
+500 – INTERNAL SERVER ERROR, states that server has thrown some exception while executing the method
+
+
+What is Web API?
+
+ASP.NET Web API is a framework which allows you to build HTTP services for browsers and mobile devices. It is an ideal platform for developing RESTful applications on the ASP .NET Framework.
+
+The ASP.NET Web API is an extensible framework for building HTTP based services that can be accessed in different applications on different platforms such a web, windows, mobile devices, etc.
+
+Why use WCF?
+
+WCF is an ideal option if you are planning to use .NET Framework 3.5.
+WCF support multiple protocols such as HTTP, TCP, Named pipe.
+WCF service is useful if you want to build service with standards like Transactions Messaging security and Reliable Message Security.
+You can use Request-Reply, One Way, and Duplex message exchange patterns with WCF.
+
+Why used Web API?
+
+Web API provides supports for convention-based CRUD Actions since it works with HTTP verbs ( GET, PUT, POST, and DELETE)
+It is easy to define, expose, and consume in a REST-ful way.
+ASP.Net Web API allows you to showcase your data and services to various devices.
+Web API is open source, so it is an ideal option for creating RESTful services over the .NET platform.
+Allows you scalable, decoupled development of a Web Service which can be shared and used by other developers to access web services.
+It is also helpful to build simple, non-SOAP-based HTTP Services.
+
+WCF Vs Web API
+
+WCF offers request-reply, one-way, or duplex while Web API is by default request-reply only.
+WCF is used for developing SOAP-based services whereas Web API is used for both SOAP-based and RESTful services.
+WCF does not offer any support for MVC features whereas Web API supports MVC features.
+WCF supports HTTP, UDP, and custom transport protocol whereas Web API supports only HTTP protocol.
+WCF offers Text, MTOM, and Binary Encoding support whereas Web API supports the UTF-8 encoding format.
+WCF supports message queues, message security, duplex communication, transaction whereas Web API doesn’t support.
+WCF stands for Windows Communication Foundation whereas API stands for Application Program Interface.
+
+How to handle errors in Web API?
+
+Several classes are available in Web API to handle errors. They are HttpError, HttpResponseException, Exception Filters, Registering Exception Filters.
+
+Name the tools or API for developing or testing web api?
+
+Testing tools for web services for REST APIs include:
+
+Jersey API
+CFX
+Axis
+Restlet
+
+REST API
+========
+An API can be REST if it folows the belw constraints
+
+- Uniform interface 
+Client and Srver has to communicate and agree to certain rules 
+Uses same resource like XML JSON and encoding like UTF-8.
+
+- Stateless
+The Client and server don't worry about the state of the request or response
+The server does not remember anything about the user who uses the API.
+
+- Cashable
+Client can cache responses. The data the server sends contain information about whether or not the data is cashable.
+
+- Client Server
+- Layered System
+- Code Demand
+The server can store the code or logic to themselves and transfer it whenever needed rather than client-side logic
+
+
+
+SOAP Vs REST
+
+- XML based protocol 
+	Architectural style protocol
+
+- Uses WSDL (Web Services Defination Language) for communication between consumer and producer
+  	Uses XML or JSON to send or receive data
+
+- Invokes Servces by calling RPC method
+	Simply calls Services via URL path
+
+- Does not return human readable path
+	Return in XML or JSON
+
+- Transfer using protocolos - HTTP, TCP, SMTP and FTP etc.
+	Uses only HTTP protocol
+
+- Perforamnce is not greate 
+	Performance is better than SOAP
+
+-

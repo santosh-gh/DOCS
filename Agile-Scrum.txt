@@ -1,0 +1,30 @@
+Scrum - is an agile project management methodology or framework used primarily for software development projects with the goal of delivering new software capability every 2-4 weeks. It articulates a set of values and principles to guide decisions on how to develop higher-quality software faster.
+
+Agile is a set of values and principles that describe a group's day-to-day interactions and activities.
+
+Benefits Received from the Scrum Methodology?
+
+Higher productivity
+Better-quality products
+Reduced time to market
+Improved stakeholder satisfaction
+Better team dynamics
+Happier employees
+
+Scrum Events
+----------------
+Sprint Planning
+The Daily Stand-up
+The Sprint Review
+The Retrospective
+
+Scrum Artifacts
+----------------
+Product Backlog
+Sprint Backlog
+
+Scrum Roles
+----------------
+ScrumMaster
+Product Owner
+Team

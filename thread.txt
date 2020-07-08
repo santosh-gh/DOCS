@@ -1,0 +1,77 @@
+What is the difference between Threads and Tasks?
+
+Tasks are wrapper around Thread and ThreadPool classes. Below are some major differences between Threads and Tasks:
+
+- A Task can return a result but there is no proper way to return a result from Thread.
+- We can apply chaining on multiple tasks but we can not in threads.
+- We can wait on Tasks without using Signalling. But in Threads we have to use event signals like AutoResetEvent and ManualResetEvent.
+- We can apply Parent/Child relationship in Tasks. A Task at one time becomes parent of multiple tasks. Parent Task does not complete until it's child tasks are   completed. We do not have any such mechanim in Thread class.
+- Child Tasks can propagate their exceptions to to parent Task and All child exceptions are available in AggregateException class.
+- Tasks has in-build cancellation mechanism using CancellationToken class.
+
+Interlocked functions can only work on int, long, double and float data types. Below are the some Interlocked functions.
+
+1) Add(ref int location1, int value) : For safely adding the value into int variable.
+
+2) Increment(ref int location1) : For safely increase the value of int variable by 1.
+
+3) Decrement(ref int location1) : For safely decrease the value of int variable by 1.
+
+4) Exchange(ref int location1, int value) : For safely set the new value into int value location1.
+
+5) CompareExchange(ref int location1, int value, int comparand) : It first check the old value in location1 to comparand value. It both are equal then only it set the new value into int value location1.
+
+What is AutoResetEvent and how it is different from ManualResetEvent?
+
+AutoResetEvent is used when we have to unlock only one single thread from several waiting blocked threads.
+
+Below are differences from ManualResetEvent.
+
+ManualResetEvent is used for unblocks many threads simultaneously. But AutoResetEvent is used for unblocks only one single thread.
+You have to call Reset() method manually after calling Set() method to reset the ManualResetEvent. But AutoResetEvent Set() method automatically calls the Reset() method.
+
+Semaphores are used when we have to restrict how many threads can enter a critical region. Semaphore is simply a int32 variable maintained by the kernel. We have initialize the Semaphore variable we specify the count how many threads can enter into critical region at a time. A thread waiting on a semaphore blocks when the semaphore is 0 and unblocks when the semaphore is greater than 0.
+
+When we create instantiate a semaphore object, we have to provide two parameters in the constructor. First one is the InitialCount and second one is MaximumCount.
+
+MaximumCount denotes the maximum number of threads that can enter concurrently.
+
+InitialCount denotes the initial number of threads which can enter the Semaphore directly.
+
+Threads enter the semaphore by calling the WaitOne method and release the semaphore by calling the Release method. You can release multiple threads by passing the count in the Release method. By default Release method takes one and only release one thread.
+
+What is Mutex and how it is different from another Synchronization mechanisms?
+
+Mutex works similarly like AutoResetEvent and releases only one waiting thread at a time.
+
+In the AutoResetEvent any thread can call the Set() method and unblock a waiting thread. But Mutex object remembers the thread which got the Mutex object and only that thread can release the Mutex.
+
+Mutex object auto record the thread id which got the Mutex object and when a user calls the ReleaseMutex() method for releasing a Mutex object, it internally checks whether the releasing thread is same as the thread which got the Mutex object if yes, then only it releases the Mutex object else it throws an exception.
+
+What is Lock?
+
+Lock is another synchronization mechanism in C# and one of the famous multi-threading interview questions in .NET. It restricts the critical region so that only one thread can enter a critical region at a time.
+
+Locks needs an object to continue its operation. It apply a lock on a target object and only one thread can lock that target object at a time. Below is the example of lock object.
+
+What are Concurrent Collection Classes?
+
+.NET Framework Class Library (FCL) provides four thread-safe collection classes in the System.Collections.Concurrent namespace.
+
+ConcurrentQueue : It provides a thread-safe First-In-First-Out (FIFO) data structure. You can read more about ConcurrentQueue.
+ConcurrentStack : It provides a thread-safe Last-In-First-Out (LIFO) data structure. You can read more about ConcurrentStack.
+ConcurrentDictionary : It provides a thread-safe collection class to store key-value pairs. You can read more about ConcurrentDictionary.
+ConcurrentBag : It provides a thread-safe collection class to store objects in unordered way. You can read more about ConcurrentBag.
+
+What is the Difference between Lock and Monitor?
+
+Lock is just a shortcut for Monitor statement. Compiler internally convert lock statement to Monitor.Enter and Exit statements.
+
+Monitor class provides some useful method which are not in lock statement. These methods are very useful in advanced scenarios.
+
+Monitor provides TryEnter method. This method is useful when we need to provide timeout value.
+TryEnter is also useful when we have to check whether lock is taken or not. We can pass a boolean parameter which returns true if lock is taken else returns false.
+Pulse method notifies a waiting thread of a change in the locked object's state.
+Wait method release the current acquired lock and block the current thread until it reacquires the lock.
+
+Mutex - is a mechanism that locks a shared resource exclusively from concurent access.Mutex works across process.The Mutex class provides the WaitOne() method which we need to call to lock the resource and similarly it provides ReleaseMutex() which is used to unlock the resource. Note that a Mutex can only be released from the same thread which obtained it.

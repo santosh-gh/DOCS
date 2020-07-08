@@ -1,0 +1,210 @@
+The following lists the stages of execution for an MVC Web project:
+
+Receive first request for the application
+In the Global.asax file, Route objects are added to the RouteTable object.
+
+Perform routing
+The UrlRoutingModule module uses the first matching Route object in the RouteTable collection to create the RouteData object, which it then uses to create a RequestContext (IHttpContext) object.
+
+Create MVC request handler
+The MvcRouteHandler object creates an instance of the MvcHandler class and passes it the RequestContext instance.
+
+Create controller
+The MvcHandler object uses the RequestContext instance to identify the IControllerFactory object (typically an instance of the DefaultControllerFactory class) to create the controller instance. The MvcHandler instance calls the controllers Execute method. 
+
+Invoke action
+Most controllers inherit from the Controller base class. For controllers that do so, the ControllerActionInvoker object that is associated with the controller determines which action method of the controller class to call, and then calls that method.
+Execute result
+
+A typical action method might receive user input, prepare the appropriate response data, and then execute the result by returning a result type. The built-in result types that can be executed include the following: ViewResult (which renders a view and is the most-often used result type), RedirectToRouteResult, RedirectResult, ContentResult, JsonResult, and EmptyResult.
+
+Razor - Razor is a markup syntax that lets you embed server-based code into web pages using C# and VB.Net. It is not a programming language. It is a server side markup language. Razor has no ties to ASP.NET MVC because Razor is a general-purpose templating engine.
+Razor allows you to write mix of HTML and server side code using C# or Visual Basic. 
+
+Route attribute - In ASP.NET MVC 5.0 we have a new attribute route,by using the “Route” attribute we can define the URL structure.
+
+TempData - is a dictionary object to store data temporarily. It is a TempDataDictionary class type and instance property of the Controller base class. 
+TempData can keep data for the duration of an HTTP request; in other words, it can keep live data between two consecutive HTTP requests. It will help us to pass the state between action methods. TempData only works with the current and subsequent request. TempData uses a session variable to store the data. TempData Requires type casting when used to retrieve data.
+
+ViewData
+
+ViewData is used to pass data from a controller to view.
+It is derived from ViewDataDictionary class.
+It is available for the current request only.
+Requires typecasting for complex data type and checks for null values to avoid error.
+If redirection occurs, then its value becomes null.
+
+ViewBag
+
+ViewBag is also used to pass data from the controller to the respective view.
+ViewBag is a dynamic property that takes advantage of the new dynamic features in C# 4.0
+It is also available for the current request only.
+If redirection occurs, then its value becomes null.
+Doesn’t require typecasting for the complex data type.
+
+Filters
+
+Action Filters: Action filters are used to implement logic that gets executed before and after a controller action executes. 
+Authorization Filters: Authorization filters are used to implement authentication and authorization for controller actions.
+Result Filters: Result filters contain logic that is executed before and after a view result is executed. For example, you might want to modify a view result right before the view is rendered to the browser.
+Exception Filters: Exception filters are the last type of filter to run. You can use an exception filter to handle errors raised by either your controller actions or controller action results. You can also use exception filters to log errors.
+
+Action Results
+
+ViewResult (View): This return type is used to return a webpage from an action method.
+PartialviewResult (Partialview): This return type is used to send a part of a view that will be rendered in another view.
+RedirectResult (Redirect): This return type is used to redirect to any other controller and action method depending on the URL.
+RedirectToRouteResult (RedirectToAction, RedirectToRoute): This return type is used when we want to redirect to any other action method.
+ContentResult (Content): This return type is used to return HTTP content type like text/plain as the result of the action.
+jsonResult (JSON): This return type is used when we want to return a JSON message.
+javascriptResult (javascript): This return type is used to return JavaScript code that will run in the browser.
+FileResult (File): This return type is used to send binary output in response.
+EmptyResult: This return type is used to return nothing (void) in the result.
+
+Bundling: It lets us combine multiple JavaScript (.js) files or multiple cascading style sheet (.css) files so that they can be downloaded as a unit, rather than making individual HTTP requests.
+
+Minification: It extracts the whitespace and performs other types of compression to make the downloaded files as small as possible. At runtime, the process recognizes the agent of the user, for example, IE, Mozilla, etc. and then removes whatever is specific to Mozilla when the request comes from IE.
+
+ASP.NET Core - is a new version of ASP.NET.It is more than just another version of ASP.NET .ASP.NET Core is a web framework for developing modern web applications and cloud applications.It has number of useful features such as:
+
+Cross platform supports all the major OS such as Linux,Windows,Mac.
+Open source  ASP.NET Core has huge community of developers who contribute to add new features frequently
+Modular  and Lightweight Unlike ASP.NET which was based on System.Web.dll,ASP.Core is consumed using Nuget packages.You only need to add the nuget packages you require for a specific functionality.
+Integrated  ASP.NET Core could be used for developing both UI based web applications and WebAPIs
+These are some of the most important MVC interview questions and answers which you should know when attending MVC interview.These questions will not only help you with the interview but would also help in understanding MVC. better.
+
+Ajax helper methods - are like HTML helper methods.The difference between the two is that HTML helper methods sends request to action methods synchronously while AJAX helper methods calls action methods asynchronously.You need to include the following nuget in your project for working with ajax helper methods:
+
+Microsoft.jQuery.Unobtrusive.Ajax
+
+Bundling and Minification -  is used for improving the performance of the application.When external JavaScript and CSS files are referenced in a web page then separate HTTP Requests are made to the server to fetch the contents of those files.So for example if your page references files called Common.js and Common.cs in a web page as:
+
+1
+2
+<script type="text/javascript" src="../Scripts/Common.js"/>
+<link rel="stylesheet" type="text/css" href="../CSS/Common.css">
+then your web page will make two separate HTTP requests to fetch the contents of Common.js and Common.cs.This results is some performance overhead.Bundling and Minification is used to overcome this performance overhead.
+
+Bundling reduces the number of HTTP requests made to the server by combining several files into a single bundle.Minification reduces the size of the individual files by removing unnecessary characters.
+
+You can enable Bundling by setting a property called EnableOptimizations in “BundleConfig.cs” in App_Start folder.
+
+What is _ViewStart.cshtml?
+_ViewStart.cshtml defines code which is executed before any code in any of the views is executed.It is applied to all the views in a subdirectory.For example following is commonly included in _ViewStart.cshtml file:
+
+@{
+Layout = "~/Views/Shared/_Layout.cshtml";
+}
+The above razor block will set a common layout for all the views.We can include our own code also in _Layout.cshtml which we want to execute before the code in any of the view executes.
+
+For defining the UI elements which are common for multiple views in your application you use _layout.cshtml.It is added to the shared folder in the views directory as it is shared by multiple views.
+
+Validation in MVC
+Required
+DataType
+Range
+StringLength
+
+Filters - Sometimes we want to execute some logic either before the execution of the action method or after the execution of the action method.We can use Action Filter for such kind of scenario.Filters defines logic which is executed before or after the execution of the action method.Action Filters are attributes which we can apply to the action methods.Following are the MVC action Filter types:
+
+Authorization filter (implements IAuthorizationFilter) 
+Action filter  (implements IActionFilter) 
+Result filter  (implements IResultFilter) 
+Exception filter  (implementsIExceptionFilter attribute)
+Filters are executed in the above order when multiple filters are attached to an action method.
+
+HTML helpers - 
+BeginForm()
+EndForm()
+TextArea()
+TextBox()
+CheckBox()
+RadioButton()
+DropDownList()
+Hidden()
+Password()
+
+What is difference between ASP.NET MVC and ASP.NET WebForms?
+
+WebForms lack separation of concerns, which means the code and .aspx page are tightly associated with each other. This creates errors when the developer attempts to change one without impacting other.
+
+However, ASP.NET MVC has a separation of concerns, which means that one aspect or component can be changed without disturbing other.
+
+
+
+===========================================
+Advantages of ASP.NET MVC:
+Extensive support for TDD.With asp.net MVC, views can also be very easily unit tested.
+Complex applications can be easily managed
+Separation of concerns.Different aspects of the application can be divided into Model, View, and Controller.
+ASP.NET MVC views are lightweight, as they don’t use ViewState.
+===========================================
+14. Define what is the ‘page lifecycle’ of an ASP.NET MVC?
+The following process is performed by ASP.Net MVC page:
+
+App initialization
+Routing
+Instantiate and execute controller
+Locate and invoke controller action
+Instantiate and render view
+============================================
+
+ASP.NET routing?
+In an ASP.NET web application that does not make use of routing, an incoming browser request should map to a physical file. If the file does not exist, we get a page not found the error.
+
+An ASP.NET web application that does make use of routing, makes use of URLs that do not have to map to specific files in a Web site.Because the URL does not have to map to a file, you can use URLs that are descriptive of the user’s action and therefore are more easily understood by users.
+
+===========================================
+Define what are the 2 ways of adding constraints to a route?
+
+Use regular expressions
+Use an object that implements IRouteConstraint interface
+
+===========================================
+Define what is the use of action filters in an MVC application?
+Action Filters allow us to add pre-action and post-action behavior to controller action methods.
+
+===========================================
+Define what is the difference between Viewbag and Viewdata in ASP.NET MVC?
+The basic difference between ViewData and ViewBag is that in ViewData instead creating dynamic properties we use properties of Model to transport the Model data in View and in ViewBag we can create dynamic properties without using Model data.
+==========================================
+
+Define what is scaffolding using ASP.Net MVC Engine?
+Answer: Scaffolding helps us to write CRUD operations blend using Entity Framework, It helps the developer to write down simply even yet complex business logic.
+
+==========================================
+75. Define what is life cycle in ASP.Net MVC Engine?
+Step 1: Fill Route(Global.asax file will hit first).
+Step 2: Fetch Route: It will gather information about the controller and action to invoke.
+Step 3: Request Context
+Step 4: Controller instance: it calls the Controller class and method.
+Step 5: Executing Action: It determines which action to be executed
+Step 6: Result(View) : Now Action method executed and returns back the response to view in differentiating forms like Jason, View Result, File Result, etc.
+
+===========================
+Different ways to pass data from View to controller
+
+1. Using Parameters
+2. Using Requist
+3. Using FormCollection
+4. Using Strong Binding
+5. Using js
+
+====================
+Types of Validation
+
+-[Required]
+-[EmailAddress]
+-[Range(18,100)]
+
+============================
+Methods for rendering partial views
+var a = @Html.Partal("viewName") - Slower
+@{Html.RenderPartial("viewName");} - Faster
+
+- Partial return MvcHtmalString we can assign to a variable
+- RenderPartial return void
+
+
+
+
